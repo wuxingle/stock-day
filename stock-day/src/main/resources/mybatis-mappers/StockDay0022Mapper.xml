@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stock.stockday.mapper.StockDay0022Mapper" >
+  <resultMap id="BaseResultMap" type="com.stock.stockday.entity.StockDay0022" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="code_id" property="codeId" jdbcType="VARCHAR" />
+    <result column="code_ex" property="codeEx" jdbcType="CHAR" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="opening_price" property="openingPrice" jdbcType="DECIMAL" />
+    <result column="closing_price" property="closingPrice" jdbcType="DECIMAL" />
+    <result column="change_points" property="changePoints" jdbcType="DECIMAL" />
+    <result column="rate_of_change" property="rateOfChange" jdbcType="DECIMAL" />
+    <result column="foot" property="foot" jdbcType="DECIMAL" />
+    <result column="topside" property="topside" jdbcType="DECIMAL" />
+    <result column="make_quantity" property="makeQuantity" jdbcType="DECIMAL" />
+    <result column="make_price" property="makePrice" jdbcType="DECIMAL" />
+    <result column="turnover_rate" property="turnoverRate" jdbcType="DECIMAL" />
+    <result column="tcap" property="tcap" jdbcType="DECIMAL" />
+    <result column="mcap" property="mcap" jdbcType="DECIMAL" />
+    <result column="lclose_price" property="lclosePrice" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, code_id, code_ex, date, opening_price, closing_price, change_points, rate_of_change, 
+    foot, topside, make_quantity, make_price, turnover_rate, tcap, mcap, lclose_price
+  </sql>
+  <select id="selectByCodeAndEx" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from stock_day_0022
+    where code_id = #{codeId,jdbcType=VARCHAR}and code_ex=#{codeEx,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByCodeAndExPage" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from stock_day_0022
+    where code_id = #{codeId,jdbcType=VARCHAR}and code_ex=#{codeEx,jdbcType=VARCHAR}
+    order by date DESC
+  </select>
+  <insert id="insertSelective" parameterType="com.stock.stockday.entity.StockDay0022" >
+    insert into stock_day_0022
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="codeId != null" >
+        code_id,
+      </if>
+      <if test="codeEx != null" >
+        code_ex,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="openingPrice != null" >
+        opening_price,
+      </if>
+      <if test="closingPrice != null" >
+        closing_price,
+      </if>
+      <if test="changePoints != null" >
+        change_points,
+      </if>
+      <if test="rateOfChange != null" >
+        rate_of_change,
+      </if>
+      <if test="foot != null" >
+        foot,
+      </if>
+      <if test="topside != null" >
+        topside,
+      </if>
+      <if test="makeQuantity != null" >
+        make_quantity,
+      </if>
+      <if test="makePrice != null" >
+        make_price,
+      </if>
+      <if test="turnoverRate != null" >
+        turnover_rate,
+      </if>
+      <if test="tcap != null" >
+        tcap,
+      </if>
+      <if test="mcap != null" >
+        mcap,
+      </if>
+      <if test="lclosePrice != null" >
+        lclose_price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="codeId != null" >
+        #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="codeEx != null" >
+        #{codeEx,jdbcType=CHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="openingPrice != null" >
+        #{openingPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="closingPrice != null" >
+        #{closingPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="changePoints != null" >
+        #{changePoints,jdbcType=DECIMAL},
+      </if>
+      <if test="rateOfChange != null" >
+        #{rateOfChange,jdbcType=DECIMAL},
+      </if>
+      <if test="foot != null" >
+        #{foot,jdbcType=DECIMAL},
+      </if>
+      <if test="topside != null" >
+        #{topside,jdbcType=DECIMAL},
+      </if>
+      <if test="makeQuantity != null" >
+        #{makeQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="makePrice != null" >
+        #{makePrice,jdbcType=DECIMAL},
+      </if>
+      <if test="turnoverRate != null" >
+        #{turnoverRate,jdbcType=DECIMAL},
+      </if>
+      <if test="tcap != null" >
+        #{tcap,jdbcType=DECIMAL},
+      </if>
+      <if test="mcap != null" >
+        #{mcap,jdbcType=DECIMAL},
+      </if>
+      <if test="lclosePrice != null" >
+        #{lclosePrice,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.stock.stockday.entity.StockDay0022" >
+    update stock_day_0022
+    <set >
+      <if test="codeId != null" >
+        code_id = #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="codeEx != null" >
+        code_ex = #{codeEx,jdbcType=CHAR},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="openingPrice != null" >
+        opening_price = #{openingPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="closingPrice != null" >
+        closing_price = #{closingPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="changePoints != null" >
+        change_points = #{changePoints,jdbcType=DECIMAL},
+      </if>
+      <if test="rateOfChange != null" >
+        rate_of_change = #{rateOfChange,jdbcType=DECIMAL},
+      </if>
+      <if test="foot != null" >
+        foot = #{foot,jdbcType=DECIMAL},
+      </if>
+      <if test="topside != null" >
+        topside = #{topside,jdbcType=DECIMAL},
+      </if>
+      <if test="makeQuantity != null" >
+        make_quantity = #{makeQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="makePrice != null" >
+        make_price = #{makePrice,jdbcType=DECIMAL},
+      </if>
+      <if test="turnoverRate != null" >
+        turnover_rate = #{turnoverRate,jdbcType=DECIMAL},
+      </if>
+      <if test="tcap != null" >
+        tcap = #{tcap,jdbcType=DECIMAL},
+      </if>
+      <if test="mcap != null" >
+        mcap = #{mcap,jdbcType=DECIMAL},
+      </if>
+      <if test="lclosePrice != null" >
+        lclose_price = #{lclosePrice,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

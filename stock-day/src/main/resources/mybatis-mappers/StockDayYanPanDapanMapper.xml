@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stock.stockday.mapper.StockDayYanPanDapanMapper" >
+  <resultMap id="BaseResultMap" type="com.stock.stockday.entity.StockDayYanPanDapan" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="da_pan1" property="daPan1" jdbcType="VARCHAR" />
+    <result column="da_pan2" property="daPan2" jdbcType="VARCHAR" />
+    <result column="da_pan3" property="daPan3" jdbcType="VARCHAR" />
+    <result column="da_pan5" property="daPan5" jdbcType="VARCHAR" />
+    <result column="da_pan13" property="daPan13" jdbcType="VARCHAR" />
+    <result column="da_pan20" property="daPan20" jdbcType="VARCHAR" />
+    <result column="shang_zhang_sum1" property="shangZhangSum1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma1" property="shangZhangMa1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count1" property="shangZhangCount1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate1" property="shangZhangRate1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum1" property="xiaJiangSum1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma1" property="xiaJiangMa1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count1" property="xiaJiangCount1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate1" property="xiaJiangRate1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum2" property="shangZhangSum2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma2" property="shangZhangMa2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count2" property="shangZhangCount2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate2" property="shangZhangRate2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum2" property="xiaJiangSum2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma2" property="xiaJiangMa2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count2" property="xiaJiangCount2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate2" property="xiaJiangRate2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum3" property="shangZhangSum3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma3" property="shangZhangMa3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count3" property="shangZhangCount3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate3" property="shangZhangRate3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum3" property="xiaJiangSum3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma3" property="xiaJiangMa3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count3" property="xiaJiangCount3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate3" property="xiaJiangRate3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum5" property="shangZhangSum5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma5" property="shangZhangMa5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count5" property="shangZhangCount5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate5" property="shangZhangRate5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum5" property="xiaJiangSum5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma5" property="xiaJiangMa5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count5" property="xiaJiangCount5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate5" property="xiaJiangRate5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum8" property="shangZhangSum8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma8" property="shangZhangMa8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count8" property="shangZhangCount8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate8" property="shangZhangRate8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum8" property="xiaJiangSum8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma8" property="xiaJiangMa8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count8" property="xiaJiangCount8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate8" property="xiaJiangRate8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum13" property="shangZhangSum13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma13" property="shangZhangMa13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count13" property="shangZhangCount13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate13" property="shangZhangRate13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum13" property="xiaJiangSum13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma13" property="xiaJiangMa13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count13" property="xiaJiangCount13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate13" property="xiaJiangRate13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum20" property="shangZhangSum20" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma20" property="shangZhangMa20" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count20" property="shangZhangCount20" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate20" property="shangZhangRate20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum20" property="xiaJiangSum20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma20" property="xiaJiangMa20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count20" property="xiaJiangCount20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate20" property="xiaJiangRate20" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, da_pan1, da_pan2, da_pan3, da_pan5, da_pan13, da_pan20, shang_zhang_sum1, shang_zhang_ma1, 
+    shang_zhang_count1, shang_zhang_rate1, xia_jiang_sum1, xia_jiang_ma1, xia_jiang_count1, 
+    xia_jiang_rate1, shang_zhang_sum2, shang_zhang_ma2, shang_zhang_count2, shang_zhang_rate2, 
+    xia_jiang_sum2, xia_jiang_ma2, xia_jiang_count2, xia_jiang_rate2, shang_zhang_sum3, 
+    shang_zhang_ma3, shang_zhang_count3, shang_zhang_rate3, xia_jiang_sum3, xia_jiang_ma3, 
+    xia_jiang_count3, xia_jiang_rate3, shang_zhang_sum5, shang_zhang_ma5, shang_zhang_count5, 
+    shang_zhang_rate5, xia_jiang_sum5, xia_jiang_ma5, xia_jiang_count5, xia_jiang_rate5, 
+    shang_zhang_sum8, shang_zhang_ma8, shang_zhang_count8, shang_zhang_rate8, xia_jiang_sum8, 
+    xia_jiang_ma8, xia_jiang_count8, xia_jiang_rate8, shang_zhang_sum13, shang_zhang_ma13, 
+    shang_zhang_count13, shang_zhang_rate13, xia_jiang_sum13, xia_jiang_ma13, xia_jiang_count13, 
+    xia_jiang_rate13, shang_zhang_sum20, shang_zhang_ma20, shang_zhang_count20, shang_zhang_rate20, 
+    xia_jiang_sum20, xia_jiang_ma20, xia_jiang_count20, xia_jiang_rate20
+  </sql>
+  <select id="selectBySelective" resultMap="BaseResultMap" parameterType="com.stock.stockday.entity.StockDayYanPanDapan" >
+    select
+    <include refid="Base_Column_List" />
+    from stock_day_yan_pan_dapan
+    where
+    <choose>
+      <when test="daPan1 != null">
+        da_pan1 = #{daPan1,jdbcType=VARCHAR} and
+      </when>
+      <otherwise>
+        da_pan1 ='0' and
+      </otherwise>
+    </choose>
+    <choose>
+      <when test="daPan2 != null">
+        da_pan2 = #{daPan2,jdbcType=VARCHAR} and
+      </when>
+      <otherwise>
+        da_pan2 ='0' and
+      </otherwise>
+    </choose>
+    <choose>
+      <when test="daPan3 != null">
+        da_pan3 = #{daPan3,jdbcType=VARCHAR} and
+      </when>
+      <otherwise>
+        da_pan3 ='0' and
+      </otherwise>
+    </choose>
+    <choose>
+      <when test="daPan5 != null">
+        da_pan5 = #{daPan5,jdbcType=VARCHAR} and
+      </when>
+      <otherwise>
+        da_pan5 ='0' and
+      </otherwise>
+    </choose>
+    <choose>
+      <when test="daPan13 != null">
+        da_pan13 = #{daPan13,jdbcType=VARCHAR} and
+      </when>
+      <otherwise>
+        da_pan13 ='0' and
+      </otherwise>
+    </choose>
+    <choose>
+      <when test="daPan20 != null">
+        da_pan20 = #{daPan20,jdbcType=VARCHAR}
+      </when>
+      <otherwise>
+        da_pan20 ='0'
+      </otherwise>
+    </choose>
+  </select>
+
+  <insert id="insertSelective" parameterType="com.stock.stockday.entity.StockDayYanPanDapan" >
+    insert into stock_day_yan_pan_dapan
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="daPan1 != null" >
+        da_pan1,
+      </if>
+      <if test="daPan2 != null" >
+        da_pan2,
+      </if>
+      <if test="daPan3 != null" >
+        da_pan3,
+      </if>
+      <if test="daPan5 != null" >
+        da_pan5,
+      </if>
+      <if test="daPan13 != null" >
+        da_pan13,
+      </if>
+      <if test="daPan20 != null" >
+        da_pan20,
+      </if>
+      <if test="shangZhangSum1 != null" >
+        shang_zhang_sum1,
+      </if>
+      <if test="shangZhangMa1 != null" >
+        shang_zhang_ma1,
+      </if>
+      <if test="shangZhangCount1 != null" >
+        shang_zhang_count1,
+      </if>
+      <if test="shangZhangRate1 != null" >
+        shang_zhang_rate1,
+      </if>
+      <if test="xiaJiangSum1 != null" >
+        xia_jiang_sum1,
+      </if>
+      <if test="xiaJiangMa1 != null" >
+        xia_jiang_ma1,
+      </if>
+      <if test="xiaJiangCount1 != null" >
+        xia_jiang_count1,
+      </if>
+      <if test="xiaJiangRate1 != null" >
+        xia_jiang_rate1,
+      </if>
+      <if test="shangZhangSum2 != null" >
+        shang_zhang_sum2,
+      </if>
+      <if test="shangZhangMa2 != null" >
+        shang_zhang_ma2,
+      </if>
+      <if test="shangZhangCount2 != null" >
+        shang_zhang_count2,
+      </if>
+      <if test="shangZhangRate2 != null" >
+        shang_zhang_rate2,
+      </if>
+      <if test="xiaJiangSum2 != null" >
+        xia_jiang_sum2,
+      </if>
+      <if test="xiaJiangMa2 != null" >
+        xia_jiang_ma2,
+      </if>
+      <if test="xiaJiangCount2 != null" >
+        xia_jiang_count2,
+      </if>
+      <if test="xiaJiangRate2 != null" >
+        xia_jiang_rate2,
+      </if>
+      <if test="shangZhangSum3 != null" >
+        shang_zhang_sum3,
+      </if>
+      <if test="shangZhangMa3 != null" >
+        shang_zhang_ma3,
+      </if>
+      <if test="shangZhangCount3 != null" >
+        shang_zhang_count3,
+      </if>
+      <if test="shangZhangRate3 != null" >
+        shang_zhang_rate3,
+      </if>
+      <if test="xiaJiangSum3 != null" >
+        xia_jiang_sum3,
+      </if>
+      <if test="xiaJiangMa3 != null" >
+        xia_jiang_ma3,
+      </if>
+      <if test="xiaJiangCount3 != null" >
+        xia_jiang_count3,
+      </if>
+      <if test="xiaJiangRate3 != null" >
+        xia_jiang_rate3,
+      </if>
+      <if test="shangZhangSum5 != null" >
+        shang_zhang_sum5,
+      </if>
+      <if test="shangZhangMa5 != null" >
+        shang_zhang_ma5,
+      </if>
+      <if test="shangZhangCount5 != null" >
+        shang_zhang_count5,
+      </if>
+      <if test="shangZhangRate5 != null" >
+        shang_zhang_rate5,
+      </if>
+      <if test="xiaJiangSum5 != null" >
+        xia_jiang_sum5,
+      </if>
+      <if test="xiaJiangMa5 != null" >
+        xia_jiang_ma5,
+      </if>
+      <if test="xiaJiangCount5 != null" >
+        xia_jiang_count5,
+      </if>
+      <if test="xiaJiangRate5 != null" >
+        xia_jiang_rate5,
+      </if>
+      <if test="shangZhangSum8 != null" >
+        shang_zhang_sum8,
+      </if>
+      <if test="shangZhangMa8 != null" >
+        shang_zhang_ma8,
+      </if>
+      <if test="shangZhangCount8 != null" >
+        shang_zhang_count8,
+      </if>
+      <if test="shangZhangRate8 != null" >
+        shang_zhang_rate8,
+      </if>
+      <if test="xiaJiangSum8 != null" >
+        xia_jiang_sum8,
+      </if>
+      <if test="xiaJiangMa8 != null" >
+        xia_jiang_ma8,
+      </if>
+      <if test="xiaJiangCount8 != null" >
+        xia_jiang_count8,
+      </if>
+      <if test="xiaJiangRate8 != null" >
+        xia_jiang_rate8,
+      </if>
+      <if test="shangZhangSum13 != null" >
+        shang_zhang_sum13,
+      </if>
+      <if test="shangZhangMa13 != null" >
+        shang_zhang_ma13,
+      </if>
+      <if test="shangZhangCount13 != null" >
+        shang_zhang_count13,
+      </if>
+      <if test="shangZhangRate13 != null" >
+        shang_zhang_rate13,
+      </if>
+      <if test="xiaJiangSum13 != null" >
+        xia_jiang_sum13,
+      </if>
+      <if test="xiaJiangMa13 != null" >
+        xia_jiang_ma13,
+      </if>
+      <if test="xiaJiangCount13 != null" >
+        xia_jiang_count13,
+      </if>
+      <if test="xiaJiangRate13 != null" >
+        xia_jiang_rate13,
+      </if>
+      <if test="shangZhangSum20 != null" >
+        shang_zhang_sum20,
+      </if>
+      <if test="shangZhangMa20 != null" >
+        shang_zhang_ma20,
+      </if>
+      <if test="shangZhangCount20 != null" >
+        shang_zhang_count20,
+      </if>
+      <if test="shangZhangRate20 != null" >
+        shang_zhang_rate20,
+      </if>
+      <if test="xiaJiangSum20 != null" >
+        xia_jiang_sum20,
+      </if>
+      <if test="xiaJiangMa20 != null" >
+        xia_jiang_ma20,
+      </if>
+      <if test="xiaJiangCount20 != null" >
+        xia_jiang_count20,
+      </if>
+      <if test="xiaJiangRate20 != null" >
+        xia_jiang_rate20,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan1 != null" >
+        #{daPan1,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan2 != null" >
+        #{daPan2,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan3 != null" >
+        #{daPan3,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan5 != null" >
+        #{daPan5,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan13 != null" >
+        #{daPan13,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan20 != null" >
+        #{daPan20,jdbcType=VARCHAR},
+      </if>
+      <if test="shangZhangSum1 != null" >
+        #{shangZhangSum1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa1 != null" >
+        #{shangZhangMa1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount1 != null" >
+        #{shangZhangCount1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate1 != null" >
+        #{shangZhangRate1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum1 != null" >
+        #{xiaJiangSum1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa1 != null" >
+        #{xiaJiangMa1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount1 != null" >
+        #{xiaJiangCount1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate1 != null" >
+        #{xiaJiangRate1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum2 != null" >
+        #{shangZhangSum2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa2 != null" >
+        #{shangZhangMa2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount2 != null" >
+        #{shangZhangCount2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate2 != null" >
+        #{shangZhangRate2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum2 != null" >
+        #{xiaJiangSum2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa2 != null" >
+        #{xiaJiangMa2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount2 != null" >
+        #{xiaJiangCount2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate2 != null" >
+        #{xiaJiangRate2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum3 != null" >
+        #{shangZhangSum3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa3 != null" >
+        #{shangZhangMa3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount3 != null" >
+        #{shangZhangCount3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate3 != null" >
+        #{shangZhangRate3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum3 != null" >
+        #{xiaJiangSum3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa3 != null" >
+        #{xiaJiangMa3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount3 != null" >
+        #{xiaJiangCount3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate3 != null" >
+        #{xiaJiangRate3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum5 != null" >
+        #{shangZhangSum5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa5 != null" >
+        #{shangZhangMa5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount5 != null" >
+        #{shangZhangCount5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate5 != null" >
+        #{shangZhangRate5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum5 != null" >
+        #{xiaJiangSum5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa5 != null" >
+        #{xiaJiangMa5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount5 != null" >
+        #{xiaJiangCount5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate5 != null" >
+        #{xiaJiangRate5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum8 != null" >
+        #{shangZhangSum8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa8 != null" >
+        #{shangZhangMa8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount8 != null" >
+        #{shangZhangCount8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate8 != null" >
+        #{shangZhangRate8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum8 != null" >
+        #{xiaJiangSum8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa8 != null" >
+        #{xiaJiangMa8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount8 != null" >
+        #{xiaJiangCount8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate8 != null" >
+        #{xiaJiangRate8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum13 != null" >
+        #{shangZhangSum13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa13 != null" >
+        #{shangZhangMa13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount13 != null" >
+        #{shangZhangCount13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate13 != null" >
+        #{shangZhangRate13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum13 != null" >
+        #{xiaJiangSum13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa13 != null" >
+        #{xiaJiangMa13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount13 != null" >
+        #{xiaJiangCount13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate13 != null" >
+        #{xiaJiangRate13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum20 != null" >
+        #{shangZhangSum20,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa20 != null" >
+        #{shangZhangMa20,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount20 != null" >
+        #{shangZhangCount20,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate20 != null" >
+        #{shangZhangRate20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum20 != null" >
+        #{xiaJiangSum20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa20 != null" >
+        #{xiaJiangMa20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount20 != null" >
+        #{xiaJiangCount20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate20 != null" >
+        #{xiaJiangRate20,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateBySelective" parameterType="com.stock.stockday.entity.StockDayYanPanDapan" >
+    update stock_day_yan_pan_dapan
+    <set >
+      <if test="daPan1 != null" >
+        da_pan1 = #{daPan1,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan2 != null" >
+        da_pan2 = #{daPan2,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan3 != null" >
+        da_pan3 = #{daPan3,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan5 != null" >
+        da_pan5 = #{daPan5,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan13 != null" >
+        da_pan13 = #{daPan13,jdbcType=VARCHAR},
+      </if>
+      <if test="daPan20 != null" >
+        da_pan20 = #{daPan20,jdbcType=VARCHAR},
+      </if>
+      <if test="shangZhangSum1 != null" >
+        shang_zhang_sum1 = #{shangZhangSum1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa1 != null" >
+        shang_zhang_ma1 = #{shangZhangMa1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount1 != null" >
+        shang_zhang_count1 = #{shangZhangCount1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate1 != null" >
+        shang_zhang_rate1 = #{shangZhangRate1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum1 != null" >
+        xia_jiang_sum1 = #{xiaJiangSum1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa1 != null" >
+        xia_jiang_ma1 = #{xiaJiangMa1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount1 != null" >
+        xia_jiang_count1 = #{xiaJiangCount1,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate1 != null" >
+        xia_jiang_rate1 = #{xiaJiangRate1,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum2 != null" >
+        shang_zhang_sum2 = #{shangZhangSum2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa2 != null" >
+        shang_zhang_ma2 = #{shangZhangMa2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount2 != null" >
+        shang_zhang_count2 = #{shangZhangCount2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate2 != null" >
+        shang_zhang_rate2 = #{shangZhangRate2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum2 != null" >
+        xia_jiang_sum2 = #{xiaJiangSum2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa2 != null" >
+        xia_jiang_ma2 = #{xiaJiangMa2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount2 != null" >
+        xia_jiang_count2 = #{xiaJiangCount2,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate2 != null" >
+        xia_jiang_rate2 = #{xiaJiangRate2,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum3 != null" >
+        shang_zhang_sum3 = #{shangZhangSum3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa3 != null" >
+        shang_zhang_ma3 = #{shangZhangMa3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount3 != null" >
+        shang_zhang_count3 = #{shangZhangCount3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate3 != null" >
+        shang_zhang_rate3 = #{shangZhangRate3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum3 != null" >
+        xia_jiang_sum3 = #{xiaJiangSum3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa3 != null" >
+        xia_jiang_ma3 = #{xiaJiangMa3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount3 != null" >
+        xia_jiang_count3 = #{xiaJiangCount3,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate3 != null" >
+        xia_jiang_rate3 = #{xiaJiangRate3,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum5 != null" >
+        shang_zhang_sum5 = #{shangZhangSum5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa5 != null" >
+        shang_zhang_ma5 = #{shangZhangMa5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount5 != null" >
+        shang_zhang_count5 = #{shangZhangCount5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate5 != null" >
+        shang_zhang_rate5 = #{shangZhangRate5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum5 != null" >
+        xia_jiang_sum5 = #{xiaJiangSum5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa5 != null" >
+        xia_jiang_ma5 = #{xiaJiangMa5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount5 != null" >
+        xia_jiang_count5 = #{xiaJiangCount5,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate5 != null" >
+        xia_jiang_rate5 = #{xiaJiangRate5,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum8 != null" >
+        shang_zhang_sum8 = #{shangZhangSum8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa8 != null" >
+        shang_zhang_ma8 = #{shangZhangMa8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount8 != null" >
+        shang_zhang_count8 = #{shangZhangCount8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate8 != null" >
+        shang_zhang_rate8 = #{shangZhangRate8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum8 != null" >
+        xia_jiang_sum8 = #{xiaJiangSum8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa8 != null" >
+        xia_jiang_ma8 = #{xiaJiangMa8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount8 != null" >
+        xia_jiang_count8 = #{xiaJiangCount8,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate8 != null" >
+        xia_jiang_rate8 = #{xiaJiangRate8,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum13 != null" >
+        shang_zhang_sum13 = #{shangZhangSum13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa13 != null" >
+        shang_zhang_ma13 = #{shangZhangMa13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount13 != null" >
+        shang_zhang_count13 = #{shangZhangCount13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate13 != null" >
+        shang_zhang_rate13 = #{shangZhangRate13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum13 != null" >
+        xia_jiang_sum13 = #{xiaJiangSum13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa13 != null" >
+        xia_jiang_ma13 = #{xiaJiangMa13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount13 != null" >
+        xia_jiang_count13 = #{xiaJiangCount13,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate13 != null" >
+        xia_jiang_rate13 = #{xiaJiangRate13,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangSum20 != null" >
+        shang_zhang_sum20 = #{shangZhangSum20,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangMa20 != null" >
+        shang_zhang_ma20 = #{shangZhangMa20,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangCount20 != null" >
+        shang_zhang_count20 = #{shangZhangCount20,jdbcType=DECIMAL},
+      </if>
+      <if test="shangZhangRate20 != null" >
+        shang_zhang_rate20 = #{shangZhangRate20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangSum20 != null" >
+        xia_jiang_sum20 = #{xiaJiangSum20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangMa20 != null" >
+        xia_jiang_ma20 = #{xiaJiangMa20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangCount20 != null" >
+        xia_jiang_count20 = #{xiaJiangCount20,jdbcType=DECIMAL},
+      </if>
+      <if test="xiaJiangRate20 != null" >
+        xia_jiang_rate20 = #{xiaJiangRate20,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stock.stockday.mapper.StockDayFundFlow0023Mapper" >
+  <resultMap id="BaseResultMap" type="com.stock.stockday.entity.StockDayFundFlow0023" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="code_id" property="codeId" jdbcType="VARCHAR" />
+    <result column="code_ex" property="codeEx" jdbcType="CHAR" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="ex_code" property="exCode" jdbcType="VARCHAR" />
+    <result column="main_flow_into" property="mainFlowInto" jdbcType="DECIMAL" />
+    <result column="main_outflow" property="mainOutflow" jdbcType="DECIMAL" />
+    <result column="main_net_flow" property="mainNetFlow" jdbcType="DECIMAL" />
+    <result column="main_inflow_rate" property="mainInflowRate" jdbcType="DECIMAL" />
+    <result column="retail_flow_into" property="retailFlowInto" jdbcType="DECIMAL" />
+    <result column="retail_outflow" property="retailOutflow" jdbcType="DECIMAL" />
+    <result column="retail_net_flow" property="retailNetFlow" jdbcType="DECIMAL" />
+    <result column="retail_inflow_rate" property="retailInflowRate" jdbcType="DECIMAL" />
+    <result column="fund_sum" property="fundSum" jdbcType="DECIMAL" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, code_id, code_ex, date, ex_code, main_flow_into, main_outflow, main_net_flow, 
+    main_inflow_rate, retail_flow_into, retail_outflow, retail_net_flow, retail_inflow_rate, 
+    fund_sum, name
+  </sql>
+  <!--<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >-->
+    <!--select -->
+    <!--<include refid="Base_Column_List" />-->
+    <!--from stock_day_fund_flow_0023-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</select>-->
+
+  <insert id="insertSelective" parameterType="com.stock.stockday.entity.StockDayFundFlow0023" >
+    insert into stock_day_fund_flow_0023
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="codeId != null" >
+        code_id,
+      </if>
+      <if test="codeEx != null" >
+        code_ex,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="exCode != null" >
+        ex_code,
+      </if>
+      <if test="mainFlowInto != null" >
+        main_flow_into,
+      </if>
+      <if test="mainOutflow != null" >
+        main_outflow,
+      </if>
+      <if test="mainNetFlow != null" >
+        main_net_flow,
+      </if>
+      <if test="mainInflowRate != null" >
+        main_inflow_rate,
+      </if>
+      <if test="retailFlowInto != null" >
+        retail_flow_into,
+      </if>
+      <if test="retailOutflow != null" >
+        retail_outflow,
+      </if>
+      <if test="retailNetFlow != null" >
+        retail_net_flow,
+      </if>
+      <if test="retailInflowRate != null" >
+        retail_inflow_rate,
+      </if>
+      <if test="fundSum != null" >
+        fund_sum,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="codeId != null" >
+        #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="codeEx != null" >
+        #{codeEx,jdbcType=CHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="exCode != null" >
+        #{exCode,jdbcType=VARCHAR},
+      </if>
+      <if test="mainFlowInto != null" >
+        #{mainFlowInto,jdbcType=DECIMAL},
+      </if>
+      <if test="mainOutflow != null" >
+        #{mainOutflow,jdbcType=DECIMAL},
+      </if>
+      <if test="mainNetFlow != null" >
+        #{mainNetFlow,jdbcType=DECIMAL},
+      </if>
+      <if test="mainInflowRate != null" >
+        #{mainInflowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="retailFlowInto != null" >
+        #{retailFlowInto,jdbcType=DECIMAL},
+      </if>
+      <if test="retailOutflow != null" >
+        #{retailOutflow,jdbcType=DECIMAL},
+      </if>
+      <if test="retailNetFlow != null" >
+        #{retailNetFlow,jdbcType=DECIMAL},
+      </if>
+      <if test="retailInflowRate != null" >
+        #{retailInflowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="fundSum != null" >
+        #{fundSum,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.stock.stockday.entity.StockDayFundFlow0023" >
+    update stock_day_fund_flow_0023
+    <set >
+      <if test="codeId != null" >
+        code_id = #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="codeEx != null" >
+        code_ex = #{codeEx,jdbcType=CHAR},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="exCode != null" >
+        ex_code = #{exCode,jdbcType=VARCHAR},
+      </if>
+      <if test="mainFlowInto != null" >
+        main_flow_into = #{mainFlowInto,jdbcType=DECIMAL},
+      </if>
+      <if test="mainOutflow != null" >
+        main_outflow = #{mainOutflow,jdbcType=DECIMAL},
+      </if>
+      <if test="mainNetFlow != null" >
+        main_net_flow = #{mainNetFlow,jdbcType=DECIMAL},
+      </if>
+      <if test="mainInflowRate != null" >
+        main_inflow_rate = #{mainInflowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="retailFlowInto != null" >
+        retail_flow_into = #{retailFlowInto,jdbcType=DECIMAL},
+      </if>
+      <if test="retailOutflow != null" >
+        retail_outflow = #{retailOutflow,jdbcType=DECIMAL},
+      </if>
+      <if test="retailNetFlow != null" >
+        retail_net_flow = #{retailNetFlow,jdbcType=DECIMAL},
+      </if>
+      <if test="retailInflowRate != null" >
+        retail_inflow_rate = #{retailInflowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="fundSum != null" >
+        fund_sum = #{fundSum,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

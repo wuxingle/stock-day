@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stock.stockday.mapper.StockDayScience0026Mapper" >
+  <resultMap id="BaseResultMap" type="com.stock.stockday.entity.StockDayScience0026" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="code_id" property="codeId" jdbcType="VARCHAR" />
+    <result column="code_ex" property="codeEx" jdbcType="CHAR" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="macd" property="macd" jdbcType="DECIMAL" />
+    <result column="diff" property="diff" jdbcType="DECIMAL" />
+    <result column="dea" property="dea" jdbcType="DECIMAL" />
+    <result column="k" property="k" jdbcType="DECIMAL" />
+    <result column="d" property="d" jdbcType="DECIMAL" />
+    <result column="j" property="j" jdbcType="DECIMAL" />
+    <result column="rsi1" property="rsi1" jdbcType="DECIMAL" />
+    <result column="rsi2" property="rsi2" jdbcType="DECIMAL" />
+    <result column="rsi3" property="rsi3" jdbcType="DECIMAL" />
+    <result column="bias1" property="bias1" jdbcType="DECIMAL" />
+    <result column="bias2" property="bias2" jdbcType="DECIMAL" />
+    <result column="bias3" property="bias3" jdbcType="DECIMAL" />
+    <result column="cci" property="cci" jdbcType="DECIMAL" />
+    <result column="wr1" property="wr1" jdbcType="DECIMAL" />
+    <result column="wr2" property="wr2" jdbcType="DECIMAL" />
+    <result column="mid" property="mid" jdbcType="DECIMAL" />
+    <result column="upp" property="upp" jdbcType="DECIMAL" />
+    <result column="low" property="low" jdbcType="DECIMAL" />
+    <result column="price_ma5" property="priceMa5" jdbcType="DECIMAL" />
+    <result column="price_ma10" property="priceMa10" jdbcType="DECIMAL" />
+    <result column="price_ma20" property="priceMa20" jdbcType="DECIMAL" />
+    <result column="price_ma30" property="priceMa30" jdbcType="DECIMAL" />
+    <result column="price_ma60" property="priceMa60" jdbcType="DECIMAL" />
+    <result column="make_quantity_ma5" property="makeQuantityMa5" jdbcType="DECIMAL" />
+    <result column="make_quantity_ma10" property="makeQuantityMa10" jdbcType="DECIMAL" />
+    <result column="make_quantity_ma20" property="makeQuantityMa20" jdbcType="DECIMAL" />
+    <result column="make_quantity_ma30" property="makeQuantityMa30" jdbcType="DECIMAL" />
+    <result column="quantity" property="quantity" jdbcType="DECIMAL" />
+    <result column="ema12" property="ema12" jdbcType="DECIMAL" />
+    <result column="ema26" property="ema26" jdbcType="DECIMAL" />
+    <result column="rsv" property="rsv" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, code_id, code_ex, date, macd, diff, dea, k, d, j, rsi1, rsi2, rsi3, bias1, bias2, 
+    bias3, cci, wr1, wr2, mid, upp, low, price_ma5, price_ma10, price_ma20, price_ma30, 
+    price_ma60, make_quantity_ma5, make_quantity_ma10, make_quantity_ma20, make_quantity_ma30,quantity,ema12,ema26,rsv
+  </sql>
+  <select id="selectByPage" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from stock_day_science_0026
+    where code_id = #{codeId,jdbcType=VARCHAR}and code_ex=#{codeEx,jdbcType=VARCHAR}
+    order by date DESC
+  </select>
+  <select id="selectByCodeAndEx" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from stock_day_science_0026
+    where code_id = #{codeId,jdbcType=VARCHAR}and code_ex=#{codeEx,jdbcType=VARCHAR}
+  </select>
+  <insert id="insertSelective" parameterType="com.stock.stockday.entity.StockDayScience0026" >
+    insert into stock_day_science_0026
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="codeId != null" >
+        code_id,
+      </if>
+      <if test="codeEx != null" >
+        code_ex,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="macd != null" >
+        macd,
+      </if>
+      <if test="diff != null" >
+        diff,
+      </if>
+      <if test="dea != null" >
+        dea,
+      </if>
+      <if test="k != null" >
+        k,
+      </if>
+      <if test="d != null" >
+        d,
+      </if>
+      <if test="j != null" >
+        j,
+      </if>
+      <if test="rsi1 != null" >
+        rsi1,
+      </if>
+      <if test="rsi2 != null" >
+        rsi2,
+      </if>
+      <if test="rsi3 != null" >
+        rsi3,
+      </if>
+      <if test="bias1 != null" >
+        bias1,
+      </if>
+      <if test="bias2 != null" >
+        bias2,
+      </if>
+      <if test="bias3 != null" >
+        bias3,
+      </if>
+      <if test="cci != null" >
+        cci,
+      </if>
+      <if test="wr1 != null" >
+        wr1,
+      </if>
+      <if test="wr2 != null" >
+        wr2,
+      </if>
+      <if test="mid != null" >
+        mid,
+      </if>
+      <if test="upp != null" >
+        upp,
+      </if>
+      <if test="low != null" >
+        low,
+      </if>
+      <if test="priceMa5 != null" >
+        price_ma5,
+      </if>
+      <if test="priceMa10 != null" >
+        price_ma10,
+      </if>
+      <if test="priceMa20 != null" >
+        price_ma20,
+      </if>
+      <if test="priceMa30 != null" >
+        price_ma30,
+      </if>
+      <if test="priceMa60 != null" >
+        price_ma60,
+      </if>
+      <if test="makeQuantityMa5 != null" >
+        make_quantity_ma5,
+      </if>
+      <if test="makeQuantityMa10 != null" >
+        make_quantity_ma10,
+      </if>
+      <if test="makeQuantityMa20 != null" >
+        make_quantity_ma20,
+      </if>
+      <if test="makeQuantityMa30 != null" >
+        make_quantity_ma30,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="codeId != null" >
+        #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="codeEx != null" >
+        #{codeEx,jdbcType=CHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="macd != null" >
+        #{macd,jdbcType=DECIMAL},
+      </if>
+      <if test="diff != null" >
+        #{diff,jdbcType=DECIMAL},
+      </if>
+      <if test="dea != null" >
+        #{dea,jdbcType=DECIMAL},
+      </if>
+      <if test="k != null" >
+        #{k,jdbcType=DECIMAL},
+      </if>
+      <if test="d != null" >
+        #{d,jdbcType=DECIMAL},
+      </if>
+      <if test="j != null" >
+        #{j,jdbcType=DECIMAL},
+      </if>
+      <if test="rsi1 != null" >
+        #{rsi1,jdbcType=DECIMAL},
+      </if>
+      <if test="rsi2 != null" >
+        #{rsi2,jdbcType=DECIMAL},
+      </if>
+      <if test="rsi3 != null" >
+        #{rsi3,jdbcType=DECIMAL},
+      </if>
+      <if test="bias1 != null" >
+        #{bias1,jdbcType=DECIMAL},
+      </if>
+      <if test="bias2 != null" >
+        #{bias2,jdbcType=DECIMAL},
+      </if>
+      <if test="bias3 != null" >
+        #{bias3,jdbcType=DECIMAL},
+      </if>
+      <if test="cci != null" >
+        #{cci,jdbcType=DECIMAL},
+      </if>
+      <if test="wr1 != null" >
+        #{wr1,jdbcType=DECIMAL},
+      </if>
+      <if test="wr2 != null" >
+        #{wr2,jdbcType=DECIMAL},
+      </if>
+      <if test="mid != null" >
+        #{mid,jdbcType=DECIMAL},
+      </if>
+      <if test="upp != null" >
+        #{upp,jdbcType=DECIMAL},
+      </if>
+      <if test="low != null" >
+        #{low,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa5 != null" >
+        #{priceMa5,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa10 != null" >
+        #{priceMa10,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa20 != null" >
+        #{priceMa20,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa30 != null" >
+        #{priceMa30,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa60 != null" >
+        #{priceMa60,jdbcType=DECIMAL},
+      </if>
+      <if test="makeQuantityMa5 != null" >
+        #{makeQuantityMa5,jdbcType=INTEGER},
+      </if>
+      <if test="makeQuantityMa10 != null" >
+        #{makeQuantityMa10,jdbcType=INTEGER},
+      </if>
+      <if test="makeQuantityMa20 != null" >
+        #{makeQuantityMa20,jdbcType=INTEGER},
+      </if>
+      <if test="makeQuantityMa30 != null" >
+        #{makeQuantityMa30,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.stock.stockday.entity.StockDayScience0026" >
+    update stock_day_science_0026
+    <set >
+      <if test="codeId != null" >
+        code_id = #{codeId,jdbcType=VARCHAR},
+      </if>
+      <if test="codeEx != null" >
+        code_ex = #{codeEx,jdbcType=CHAR},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="macd != null" >
+        macd = #{macd,jdbcType=DECIMAL},
+      </if>
+      <if test="diff != null" >
+        diff = #{diff,jdbcType=DECIMAL},
+      </if>
+      <if test="dea != null" >
+        dea = #{dea,jdbcType=DECIMAL},
+      </if>
+      <if test="k != null" >
+        k = #{k,jdbcType=DECIMAL},
+      </if>
+      <if test="d != null" >
+        d = #{d,jdbcType=DECIMAL},
+      </if>
+      <if test="j != null" >
+        j = #{j,jdbcType=DECIMAL},
+      </if>
+      <if test="rsi1 != null" >
+        rsi1 = #{rsi1,jdbcType=DECIMAL},
+      </if>
+      <if test="rsi2 != null" >
+        rsi2 = #{rsi2,jdbcType=DECIMAL},
+      </if>
+      <if test="rsi3 != null" >
+        rsi3 = #{rsi3,jdbcType=DECIMAL},
+      </if>
+      <if test="bias1 != null" >
+        bias1 = #{bias1,jdbcType=DECIMAL},
+      </if>
+      <if test="bias2 != null" >
+        bias2 = #{bias2,jdbcType=DECIMAL},
+      </if>
+      <if test="bias3 != null" >
+        bias3 = #{bias3,jdbcType=DECIMAL},
+      </if>
+      <if test="cci != null" >
+        cci = #{cci,jdbcType=DECIMAL},
+      </if>
+      <if test="wr1 != null" >
+        wr1 = #{wr1,jdbcType=DECIMAL},
+      </if>
+      <if test="wr2 != null" >
+        wr2 = #{wr2,jdbcType=DECIMAL},
+      </if>
+      <if test="mid != null" >
+        mid = #{mid,jdbcType=DECIMAL},
+      </if>
+      <if test="upp != null" >
+        upp = #{upp,jdbcType=DECIMAL},
+      </if>
+      <if test="low != null" >
+        low = #{low,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa5 != null" >
+        price_ma5 = #{priceMa5,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa10 != null" >
+        price_ma10 = #{priceMa10,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa20 != null" >
+        price_ma20 = #{priceMa20,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa30 != null" >
+        price_ma30 = #{priceMa30,jdbcType=DECIMAL},
+      </if>
+      <if test="priceMa60 != null" >
+        price_ma60 = #{priceMa60,jdbcType=DECIMAL},
+      </if>
+      <if test="makeQuantityMa5 != null" >
+        make_quantity_ma5 = #{makeQuantityMa5,jdbcType=INTEGER},
+      </if>
+      <if test="makeQuantityMa10 != null" >
+        make_quantity_ma10 = #{makeQuantityMa10,jdbcType=INTEGER},
+      </if>
+      <if test="makeQuantityMa20 != null" >
+        make_quantity_ma20 = #{makeQuantityMa20,jdbcType=INTEGER},
+      </if>
+      <if test="makeQuantityMa30 != null" >
+        make_quantity_ma30 = #{makeQuantityMa30,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
