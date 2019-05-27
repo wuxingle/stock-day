@@ -1,0 +1,50 @@
+#spring:
+#  mvc:
+#    servlet:
+#      load-on-startup: 1
+#  zipkin:
+#    base-url: http://localhost:9411
+#    enabled: true
+#    sender:
+#      type: web
+#logging:
+#  level:
+#    root: info
+#    com.suibuaa: debug
+#  file: logs/${spring.application.name}.log
+#zuul:
+#  ignored-services: '*'
+#  sensitiveHeaders:
+#  routes:
+#    user:
+#      path: /api-u/**
+#      serviceId: user-center
+#    notify:
+#      path: /api-n/**
+#      serviceId: notification-center
+#    device:
+#      path: /api-d/**
+#      serviceId: device-center
+#    health:
+#      path: /api-h/**
+#      serviceId: health-center
+#    discovery:
+#      path: /api-f/**
+#      serviceId: discovery-center
+#  host:
+#    connect-timeout-millis: 10001
+#    socket-timeout-millis: 60001
+#  add-proxy-headers: true
+#  ribbon:
+#    eager-load:
+#      enabled: true
+#ribbon:
+#  ReadTimeout: 10001
+#  ConnectTimeout: 10001
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60001

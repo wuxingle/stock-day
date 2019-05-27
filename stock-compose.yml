@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  stock-day:
+    build: ./stock-day
+    image: stock/stock-day
+    network_mode: "host"
+    restart: always
+    ports:
+      - "8890:8890"
+    environment:
+      - TZ=Asia/Shanghai
+      - server.port=8890
+      - spring.cloud.config.profile=sit
+      - "eureka.client.service-url.defaultZone=http://register-center:8781/eureka/"
+  gateway-center:
+    build: ./gateway-center
+    image: stock/gateway-center
+    network_mode: "host"
+    restart: always
+    ports:
+      - "8880:8880"
+    environment:
+      - TZ=Asia/Shanghai
+      - spring.cloud.config.profile=sit
+      - "eureka.client.service-url.defaultZone=http://register-center:8781/eureka/"
+  cms-web:
+    build: ./cms-web
+    image: stock/cms-web
+    network_mode: "host"
+    restart: always
+    ports:
+      - "8892:8892"
+    environment:
+      - TZ=Asia/Shanghai
+      - spring.cloud.config.profile=sit
+      - "eureka.client.service-url.defaultZone=http://register-center:8781/eureka/"
