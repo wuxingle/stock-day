@@ -75,7 +75,9 @@ public class FindUtil {
             return false;
         }
         //均线上
-        if (scienceEntityList.get(0).getPriceMa30().compareTo(scienceEntityList.get(1).getPriceMa30())>=0&&scienceEntityList.get(0).getPriceMa20().compareTo(scienceEntityList.get(1).getPriceMa20())>=0){
+        BigDecimal ma30=scienceEntityList.get(0).getPriceMa30().subtract(scienceEntityList.get(1).getPriceMa30());
+        BigDecimal ma20=scienceEntityList.get(0).getPriceMa20().subtract(scienceEntityList.get(1).getPriceMa20());
+        if (ma30.compareTo(new BigDecimal(0))>=0&&ma20.compareTo(new BigDecimal(-0.03))>=0){
             //前几天在5天线上 近5天下降
             if (stockDayAllList.get(4).getTopside().compareTo(scienceEntityList.get(4).getPriceMa5())>=0||stockDayAllList.get(2).getTopside().compareTo(scienceEntityList.get(2).getPriceMa5())>=0) {
                 if (stockDayAllList.get(0).getClosingPrice().compareTo(stockDayAllList.get(5).getClosingPrice()) < 0) {
@@ -83,7 +85,7 @@ public class FindUtil {
                     BigDecimal lli20=stockDayAllList.get(0).getFoot().subtract(scienceEntityList.get(0).getPriceMa20()).divide(stockDayAllList.get(0).getClosingPrice(),4,RoundingMode.HALF_UP).multiply(new BigDecimal(100));
                     BigDecimal cli20=stockDayAllList.get(0).getClosingPrice().subtract(scienceEntityList.get(0).getPriceMa20()).divide(stockDayAllList.get(0).getClosingPrice(),4,RoundingMode.HALF_UP).multiply(new BigDecimal(100));
                     BigDecimal tli20=stockDayAllList.get(0).getTopside().subtract(scienceEntityList.get(0).getPriceMa20()).divide(stockDayAllList.get(0).getClosingPrice(),4,RoundingMode.HALF_UP).multiply(new BigDecimal(100));
-                    if ((lli20.compareTo(new BigDecimal(2))<0&&lli20.compareTo(new BigDecimal(-2))>0)||(cli20.compareTo(new BigDecimal(-3))>0&&cli20.compareTo(new BigDecimal(3))<0)||(tli20.compareTo(new BigDecimal(-2))>0&&tli20.compareTo(new BigDecimal(2))>0)){
+                    if ((lli20.compareTo(new BigDecimal(2.5))<0&&lli20.compareTo(new BigDecimal(-2.5))>0)||(cli20.compareTo(new BigDecimal(-4))>0&&cli20.compareTo(new BigDecimal(4))<0)||(tli20.compareTo(new BigDecimal(-2.5))>0&&tli20.compareTo(new BigDecimal(2.5))<0)){
                        //今天阳线
                         if (stockDayAllList.get(0).getClosingPrice().compareTo(stockDayAllList.get(0).getOpeningPrice()) > 0) {
                             return true;

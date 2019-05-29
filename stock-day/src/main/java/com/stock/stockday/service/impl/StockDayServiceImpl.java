@@ -328,10 +328,10 @@ public class StockDayServiceImpl implements StockDayService {
             String url = urlConfig.getStockUrl();
             //获取时间和编码
             String code = getEncoding(stockCode);
-            String beginTime = "20190527";
+            String beginTime = "20190528";
             String endTime;
 //            try {
-                endTime = "20190527";//parse(new Date());
+                endTime = "20190528";//parse(new Date());
 //            } catch (ParseException e) {
 //                return false;
 //            }
