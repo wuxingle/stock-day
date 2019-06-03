@@ -37,6 +37,7 @@ import com.stock.stockday.service.StockDayScience0000Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -88,7 +89,9 @@ public class DayScience0000FunctionToday {
             }
         });
         //去掉最后一个
-        stockDay0000List.remove(stockDay0000List.size()-1);
+        if (stockDay0000List.size()>=61) {
+            stockDay0000List.remove(stockDay0000List.size() - 1);
+        }
         //保存Redis
         redisTemplate.opsForValue().set(stockDay0000.getCodeEx()+stockDay0000.getCodeId(), stockDay0000List);
         MacdEntity macdEntity1 = new MacdEntity();
@@ -187,9 +190,15 @@ public class DayScience0000FunctionToday {
         }
         //kdj
         if (kdjEntityList.size() == 9) {
-            kdjEntity1.setBeforeD(stockDayScience0000List.get(0).getD());
-            kdjEntity1.setBeforeK(stockDayScience0000List.get(0).getK());
-            kdjEntity1.setBeforeRSV(stockDayScience0000List.get(0).getRsv());
+            if (StringUtils.isEmpty(stockDayScience0000List)) {
+                kdjEntity1.setBeforeD(new BigDecimal(50));
+                kdjEntity1.setBeforeK(new BigDecimal(50));
+                kdjEntity1.setBeforeRSV(new BigDecimal(50));
+            }else {
+                kdjEntity1.setBeforeD(stockDayScience0000List.get(0).getD());
+                kdjEntity1.setBeforeK(stockDayScience0000List.get(0).getK());
+                kdjEntity1.setBeforeRSV(stockDayScience0000List.get(0).getRsv());
+            }
             Collections.sort(kdjEntityList, new Comparator<KDJEntity>() {
                 @Override
                 public int compare(KDJEntity o1, KDJEntity o2) {
@@ -359,7 +368,9 @@ public class DayScience0000FunctionToday {
                 return 0;
             }
         });
-        stockDayScience0000List.remove(stockDayScience0000List.size()-1);
+        if (stockDayScience0000List.size()>=61) {
+            stockDayScience0000List.remove(stockDayScience0000List.size() - 1);
+        }
         redisTemplate.opsForValue().set(Constants.SCIENCE+stockDay0000.getCodeEx()+stockDay0000.getCodeId(), stockDayScience0000List);
         stockDayScience0000Service.save(stockDayScience0000);
         return true;

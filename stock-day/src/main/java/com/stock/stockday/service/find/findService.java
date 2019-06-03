@@ -10,4 +10,10 @@ public interface findService {
     List<StockDayVo> shengV();
 
     List<StockDayVo> reset20();
+
+    List<StockDayVo> jieQi();
+
+    List<StockDayVo> jishujieqi();
+
+    List<StockDayVo> jishujieqi1();
 }

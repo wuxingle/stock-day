@@ -5,6 +5,7 @@ import com.stock.apicommon.entity.ScienceEntity;
 import com.stock.apicommon.entity.MacdEntity;
 import com.stock.apicommon.vo.MACDScienceVo;
 import com.stock.apicommon.vo.MacdVo;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -54,6 +55,15 @@ public class MACDUtil {
         BigDecimal DIF = null;
         BigDecimal DEA = null;
         BigDecimal MACD = null;
+        if (StringUtils.isEmpty(macdEntity.getBeforeEma12())){
+            macdEntity.setBeforeEma12(new BigDecimal(50));
+        }
+        if (StringUtils.isEmpty(macdEntity.getBeforeEma26())){
+            macdEntity.setBeforeEma26(new BigDecimal(50));
+        }
+        if (StringUtils.isEmpty(macdEntity.getBeforeDea())){
+            macdEntity.setBeforeDea(new BigDecimal(50));
+        }
 
         BigDecimal EMA12_1=(macdEntity.getBeforeEma12().multiply(new BigDecimal(11))).divide(new BigDecimal(13), 2, RoundingMode.HALF_UP);
         BigDecimal EMA12_2=(macdEntity.getClosingPrice().multiply(new BigDecimal(2))).divide(new BigDecimal(13), 2, RoundingMode.HALF_UP);

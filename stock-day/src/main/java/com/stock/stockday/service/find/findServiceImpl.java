@@ -596,4 +596,491 @@ public class findServiceImpl implements findService {
         }
         return stockDayVoList;
     }
+
+    @Override
+    public List<StockDayVo> jieQi() {
+        //获取所有编码
+        List<StockCode> stockCodeList = stockCodeService.getStockCodeList();
+        if (stockCodeList == null || stockCodeList.isEmpty()) {
+            return null;
+        }
+        List<StockDayVo> stockDayVoList = new ArrayList<>();
+        //遍历
+        for (StockCode stockCode : stockCodeList) {
+            switch (stockCode.getId().substring(0, 4)) {
+                case "0000":
+                    findListStock0000.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0001":
+                    findListStock0001.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0002":
+                    findListStock0002.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0003":
+                    findListStock0003.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0004":
+                    findListStock0004.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0005":
+                    findListStock0005.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0006":
+                    findListStock0006.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0007":
+                    findListStock0007.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0008":
+                    findListStock0008.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0009":
+                    findListStock0009.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0020":
+                    findListStock0020.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0021":
+                    findListStock0021.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0022":
+                    findListStock0022.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0023":
+                    findListStock0023.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0024":
+                    findListStock0024.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0025":
+                    findListStock0025.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0026":
+                    findListStock0026.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0027":
+                    findListStock0027.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "0028":
+                    findListStock0028.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "3000":
+                    findListStock3000.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "3001":
+                    findListStock3001.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "3002":
+                    findListStock3002.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "3003":
+                    findListStock3003.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "3004":
+                    findListStock3004.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "3005":
+                    findListStock3005.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6000":
+                    findListStock6000.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6001":
+                    findListStock6001.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6002":
+                    findListStock6002.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6003":
+                    findListStock6003.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6004":
+                    findListStock6004.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6005":
+                    findListStock6005.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6006":
+                    findListStock6006.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6007":
+                    findListStock6007.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6008":
+                    findListStock6008.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6009":
+                    findListStock6009.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6010":
+                    findListStock6010.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6011":
+                    findListStock6011.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6012":
+                    findListStock6012.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6013":
+                    findListStock6013.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6014":
+                    findListStock6014.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6015":
+                    findListStock6015.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6016":
+                    findListStock6016.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6017":
+                    findListStock6017.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6018":
+                    findListStock6018.jieQi(stockCode, stockDayVoList);
+                    continue;
+                case "6019":
+                    findListStock6019.jieQi(stockCode, stockDayVoList);
+                    continue;
+                default:
+                    switch (stockCode.getId().substring(0, 3)) {
+                        case "001":
+                            findListStock001.jieQi(stockCode, stockDayVoList);
+                            continue;
+                        case "603":
+                            findListStock603.jieQi(stockCode, stockDayVoList);
+                            continue;
+                        default:
+                            continue;
+                    }
+            }
+        }
+        return stockDayVoList;
+    }
+
+    @Override
+    public List<StockDayVo> jishujieqi() {
+        //获取所有编码
+        List<StockCode> stockCodeList = stockCodeService.getStockCodeList();
+        if (stockCodeList == null || stockCodeList.isEmpty()) {
+            return null;
+        }
+        List<StockDayVo> stockDayVoList = new ArrayList<>();
+        //遍历
+        for (StockCode stockCode : stockCodeList) {
+            switch (stockCode.getId().substring(0, 4)) {
+                case "0000":
+                    findListStock0000.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0001":
+                    findListStock0001.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0002":
+                    findListStock0002.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0003":
+                    findListStock0003.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0004":
+                    findListStock0004.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0005":
+                    findListStock0005.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0006":
+                    findListStock0006.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0007":
+                    findListStock0007.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0008":
+                    findListStock0008.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0009":
+                    findListStock0009.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0020":
+                    findListStock0020.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0021":
+                    findListStock0021.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0022":
+                    findListStock0022.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0023":
+                    findListStock0023.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0024":
+                    findListStock0024.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0025":
+                    findListStock0025.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0026":
+                    findListStock0026.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0027":
+                    findListStock0027.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "0028":
+                    findListStock0028.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "3000":
+                    findListStock3000.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "3001":
+                    findListStock3001.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "3002":
+                    findListStock3002.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "3003":
+                    findListStock3003.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "3004":
+                    findListStock3004.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "3005":
+                    findListStock3005.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6000":
+                    findListStock6000.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6001":
+                    findListStock6001.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6002":
+                    findListStock6002.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6003":
+                    findListStock6003.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6004":
+                    findListStock6004.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6005":
+                    findListStock6005.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6006":
+                    findListStock6006.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6007":
+                    findListStock6007.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6008":
+                    findListStock6008.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6009":
+                    findListStock6009.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6010":
+                    findListStock6010.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6011":
+                    findListStock6011.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6012":
+                    findListStock6012.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6013":
+                    findListStock6013.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6014":
+                    findListStock6014.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6015":
+                    findListStock6015.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6016":
+                    findListStock6016.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6017":
+                    findListStock6017.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6018":
+                    findListStock6018.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                case "6019":
+                    findListStock6019.jishujieqi(stockCode, stockDayVoList);
+                    continue;
+                default:
+                    switch (stockCode.getId().substring(0, 3)) {
+                        case "001":
+                            findListStock001.jishujieqi(stockCode, stockDayVoList);
+                            continue;
+                        case "603":
+                            findListStock603.jishujieqi(stockCode, stockDayVoList);
+                            continue;
+                        default:
+                            continue;
+                    }
+            }
+        }
+        return stockDayVoList;
+    }
+
+    @Override
+    public List<StockDayVo> jishujieqi1() {
+        //获取所有编码
+        List<StockCode> stockCodeList = stockCodeService.getStockCodeList();
+        if (stockCodeList == null || stockCodeList.isEmpty()) {
+            return null;
+        }
+        List<StockDayVo> stockDayVoList = new ArrayList<>();
+        //遍历
+        for (StockCode stockCode : stockCodeList) {
+            switch (stockCode.getId().substring(0, 4)) {
+                case "0000":
+                    findListStock0000.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0001":
+                    findListStock0001.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0002":
+                    findListStock0002.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0003":
+                    findListStock0003.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0004":
+                    findListStock0004.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0005":
+                    findListStock0005.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0006":
+                    findListStock0006.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0007":
+                    findListStock0007.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0008":
+                    findListStock0008.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0009":
+                    findListStock0009.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0020":
+                    findListStock0020.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0021":
+                    findListStock0021.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0022":
+                    findListStock0022.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0023":
+                    findListStock0023.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0024":
+                    findListStock0024.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0025":
+                    findListStock0025.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0026":
+                    findListStock0026.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0027":
+                    findListStock0027.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "0028":
+                    findListStock0028.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "3000":
+                    findListStock3000.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "3001":
+                    findListStock3001.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "3002":
+                    findListStock3002.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "3003":
+                    findListStock3003.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "3004":
+                    findListStock3004.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "3005":
+                    findListStock3005.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6000":
+                    findListStock6000.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6001":
+                    findListStock6001.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6002":
+                    findListStock6002.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6003":
+                    findListStock6003.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6004":
+                    findListStock6004.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6005":
+                    findListStock6005.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6006":
+                    findListStock6006.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6007":
+                    findListStock6007.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6008":
+                    findListStock6008.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6009":
+                    findListStock6009.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6010":
+                    findListStock6010.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6011":
+                    findListStock6011.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6012":
+                    findListStock6012.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6013":
+                    findListStock6013.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6014":
+                    findListStock6014.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6015":
+                    findListStock6015.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6016":
+                    findListStock6016.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6017":
+                    findListStock6017.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6018":
+                    findListStock6018.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                case "6019":
+                    findListStock6019.jishujieqi1(stockCode, stockDayVoList);
+                    continue;
+                default:
+                    switch (stockCode.getId().substring(0, 3)) {
+                        case "001":
+                            findListStock001.jishujieqi1(stockCode, stockDayVoList);
+                            continue;
+                        case "603":
+                            findListStock603.jishujieqi1(stockCode, stockDayVoList);
+                            continue;
+                        default:
+                            continue;
+                    }
+            }
+        }
+        return stockDayVoList;
+    }
+
 }

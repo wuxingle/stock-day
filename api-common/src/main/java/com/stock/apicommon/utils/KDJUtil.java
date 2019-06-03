@@ -114,8 +114,6 @@ public class KDJUtil {
         }
 
         //获取钝化
-
-
         return kdjScienceVo;
     }
 

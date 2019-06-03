@@ -41,9 +41,23 @@ public class FindController {
         return new ResultData(stockDayVoList);
     }
 
+    @GetMapping("/jieQi")
+    public ResultData<List<StockDayVo>> jieQi(){
+        List<StockDayVo> stockDayVoList=findService.jieQi();
+        return new ResultData(stockDayVoList);
+    }
 
+    @GetMapping("/jishujieqi")
+    public ResultData<List<StockDayVo>> jishujieqi(){
+        List<StockDayVo> stockDayVoList=findService.jishujieqi();
+        return new ResultData(stockDayVoList);
+    }
 
-
+    @GetMapping("/jishujieqi1")
+    public ResultData<List<StockDayVo>> jishujieqi1(){
+        List<StockDayVo> stockDayVoList=findService.jishujieqi1();
+        return new ResultData(stockDayVoList);
+    }
 
 
 
