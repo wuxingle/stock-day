@@ -16,4 +16,6 @@ public interface findService {
     List<StockDayVo> jishujieqi();
 
     List<StockDayVo> jishujieqi1();
+
+    List<StockDayVo> jieQi2();
 }

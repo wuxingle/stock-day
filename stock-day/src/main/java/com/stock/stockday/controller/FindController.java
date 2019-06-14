@@ -3,6 +3,7 @@ package com.stock.stockday.controller;
 import com.stock.apicommon.model.ResultData;
 import com.stock.stockday.newService.list1.ZhuHeListService;
 import com.stock.stockday.service.find.findService;
+import com.stock.stockday.service.find2.yanPanService;
 import com.stock.stockday.service.list.ListStockService;
 import com.stock.stockday.vo.StockDayVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ import java.util.List;
 public class FindController {
     @Autowired
     private findService findService;
+    @Autowired
+    private com.stock.stockday.service.find2.yanPanService yanPanService;
 
 
     @GetMapping("/duoTuXiangShang")
@@ -59,7 +62,17 @@ public class FindController {
         return new ResultData(stockDayVoList);
     }
 
+    @GetMapping("/jieQi2")
+    public ResultData<List<StockDayVo>> jieQi2(){
+        List<StockDayVo> stockDayVoList=findService.jieQi2();
+        return new ResultData(stockDayVoList);
+    }
 
+    @GetMapping("/getYanPan")
+    public ResultData getYanPan() throws IOException {
+        yanPanService.getYanPan();
+        return new ResultData();
+    }
 
 
 

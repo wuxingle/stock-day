@@ -1,16 +1,16 @@
 package com.stock.stockday.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+
 @Data
-@TableName("stock_day_science")
 public class StockDayScience implements Serializable {
     private static final long serialVersionUID = 1L;
-    private Integer id;
+    private String id;
     private String codeId;
     private String codeEx;
     private Date date;
@@ -37,9 +37,13 @@ public class StockDayScience implements Serializable {
     private BigDecimal priceMa20;
     private BigDecimal priceMa30;
     private BigDecimal priceMa60;
-    private Integer makeQuantityMa5;
-    private Integer makeQuantityMa10;
-    private Integer makeQuantityMa20;
-    private Integer makeQuantityMa30;
+    private BigDecimal makeQuantityMa5;
+    private BigDecimal makeQuantityMa10;
+    private BigDecimal makeQuantityMa20;
+    private BigDecimal makeQuantityMa30;
+    private BigDecimal quantity;
+    private BigDecimal ema12;
+    private BigDecimal ema26;
+    private BigDecimal rsv;
 
 }

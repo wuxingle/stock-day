@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stock.stockday.mapper.StockDayYanPan1Mapper" >
+  <resultMap id="BaseResultMap" type="com.stock.stockday.entity.StockDayYanPan1" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="shang_zhang_sum1" property="shangZhangSum1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma1" property="shangZhangMa1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count1" property="shangZhangCount1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate1" property="shangZhangRate1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum1" property="xiaJiangSum1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma1" property="xiaJiangMa1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count1" property="xiaJiangCount1" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate1" property="xiaJiangRate1" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum2" property="shangZhangSum2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma2" property="shangZhangMa2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count2" property="shangZhangCount2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate2" property="shangZhangRate2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum2" property="xiaJiangSum2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma2" property="xiaJiangMa2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count2" property="xiaJiangCount2" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate2" property="xiaJiangRate2" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum3" property="shangZhangSum3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma3" property="shangZhangMa3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count3" property="shangZhangCount3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate3" property="shangZhangRate3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum3" property="xiaJiangSum3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma3" property="xiaJiangMa3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count3" property="xiaJiangCount3" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate3" property="xiaJiangRate3" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum5" property="shangZhangSum5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma5" property="shangZhangMa5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count5" property="shangZhangCount5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate5" property="shangZhangRate5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum5" property="xiaJiangSum5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma5" property="xiaJiangMa5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count5" property="xiaJiangCount5" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate5" property="xiaJiangRate5" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum8" property="shangZhangSum8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma8" property="shangZhangMa8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count8" property="shangZhangCount8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate8" property="shangZhangRate8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum8" property="xiaJiangSum8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma8" property="xiaJiangMa8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count8" property="xiaJiangCount8" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate8" property="xiaJiangRate8" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum13" property="shangZhangSum13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma13" property="shangZhangMa13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count13" property="shangZhangCount13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate13" property="shangZhangRate13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum13" property="xiaJiangSum13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma13" property="xiaJiangMa13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count13" property="xiaJiangCount13" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate13" property="xiaJiangRate13" jdbcType="DECIMAL" />
+    <result column="shang_zhang_sum20" property="shangZhangSum20" jdbcType="DECIMAL" />
+    <result column="shang_zhang_ma20" property="shangZhangMa20" jdbcType="DECIMAL" />
+    <result column="shang_zhang_count20" property="shangZhangCount20" jdbcType="DECIMAL" />
+    <result column="shang_zhang_rate20" property="shangZhangRate20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_sum20" property="xiaJiangSum20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_ma20" property="xiaJiangMa20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_count20" property="xiaJiangCount20" jdbcType="DECIMAL" />
+    <result column="xia_jiang_rate20" property="xiaJiangRate20" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, shang_zhang_sum1, shang_zhang_ma1, shang_zhang_count1, shang_zhang_rate1, 
+    xia_jiang_sum1, xia_jiang_ma1, xia_jiang_count1, xia_jiang_rate1, shang_zhang_sum2, 
+    shang_zhang_ma2, shang_zhang_count2, shang_zhang_rate2, xia_jiang_sum2, xia_jiang_ma2, 
+    xia_jiang_count2, xia_jiang_rate2, shang_zhang_sum3, shang_zhang_ma3, shang_zhang_count3, 
+    shang_zhang_rate3, xia_jiang_sum3, xia_jiang_ma3, xia_jiang_count3, xia_jiang_rate3, 
+    shang_zhang_sum5, shang_zhang_ma5, shang_zhang_count5, shang_zhang_rate5, xia_jiang_sum5, 
+    xia_jiang_ma5, xia_jiang_count5, xia_jiang_rate5, shang_zhang_sum8, shang_zhang_ma8, 
+    shang_zhang_count8, shang_zhang_rate8, xia_jiang_sum8, xia_jiang_ma8, xia_jiang_count8, 
+    xia_jiang_rate8, shang_zhang_sum13, shang_zhang_ma13, shang_zhang_count13, shang_zhang_rate13, 
+    xia_jiang_sum13, xia_jiang_ma13, xia_jiang_count13, xia_jiang_rate13, shang_zhang_sum20, 
+    shang_zhang_ma20, shang_zhang_count20, shang_zhang_rate20, xia_jiang_sum20, xia_jiang_ma20, 
+    xia_jiang_count20, xia_jiang_rate20
+  </sql>
+  <!--<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >-->
+    <!--select -->
+    <!--<include refid="Base_Column_List" />-->
+    <!--from stock_day_yan_pan1-->
+    <!--where id = #{id,jdbcType=VARCHAR}-->
+  <!--</select>-->
+  <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.String" >-->
+    <!--delete from stock_day_yan_pan1-->
+    <!--where id = #{id,jdbcType=VARCHAR}-->
+  <!--</delete>-->
+
+</mapper>
