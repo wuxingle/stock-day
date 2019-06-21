@@ -51,6 +51,14 @@
     order by date DESC
   </select>
 
+  <select id="selectByCodeAndEx" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from stock_day_science_399
+    where code_id = #{codeId,jdbcType=VARCHAR}and code_ex=#{codeEx,jdbcType=VARCHAR}
+    order by date DESC
+  </select>
+
   <insert id="insertSelective" parameterType="com.stock.stockday.entity.StockDayScience399" >
     insert into stock_day_science_399
     <trim prefix="(" suffix=")" suffixOverrides="," >

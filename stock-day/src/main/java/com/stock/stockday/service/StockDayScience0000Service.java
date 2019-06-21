@@ -11,5 +11,6 @@ import java.util.List;
 
 public interface StockDayScience0000Service extends IService<StockDayScience0000> {
     List<StockDayScience0000> selectByCodeAndEx(String codeId, String codeEx);
+
     List<StockDayScience0000> selectByPage(Page<StockDayScience0000> page,String codeId,String codeEx);
 }

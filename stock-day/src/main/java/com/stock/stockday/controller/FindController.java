@@ -1,10 +1,12 @@
 package com.stock.stockday.controller;
 
 import com.stock.apicommon.model.ResultData;
-import com.stock.stockday.newService.list1.ZhuHeListService;
+import com.stock.stockday.newService.find3.findService2;
 import com.stock.stockday.service.find.findService;
 import com.stock.stockday.service.find2.yanPanService;
-import com.stock.stockday.service.list.ListStockService;
+import com.stock.stockday.service.find2.yanPanService2;
+import com.stock.stockday.service.find2.yanPanService3;
+import com.stock.stockday.service.find2.yanPanService4;
 import com.stock.stockday.vo.StockDayVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -23,7 +25,15 @@ public class FindController {
     @Autowired
     private findService findService;
     @Autowired
-    private com.stock.stockday.service.find2.yanPanService yanPanService;
+    private yanPanService yanPanService;
+    @Autowired
+    private yanPanService2 yanPanService2;
+    @Autowired
+    private yanPanService3 yanPanService3;
+    @Autowired
+    private yanPanService4 yanPanService4;
+    @Autowired
+    private findService2 findService2;
 
 
     @GetMapping("/duoTuXiangShang")
@@ -67,12 +77,39 @@ public class FindController {
         List<StockDayVo> stockDayVoList=findService.jieQi2();
         return new ResultData(stockDayVoList);
     }
+    @GetMapping("/u3ShengVDapan4")
+    public ResultData<List<StockDayVo>> u3ShengVDapan4() throws IOException {
+        List<StockDayVo> stockDayVoList=findService2.U3ShengVDapan4();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/u3ShengVDapan2")
+    public ResultData<List<StockDayVo>> u3ShengVDapan2() throws IOException {
+        List<StockDayVo> stockDayVoList=findService2.U3shengVDapan2();
+        return new ResultData(stockDayVoList);
+    }
 
     @GetMapping("/getYanPan")
     public ResultData getYanPan() throws IOException {
         yanPanService.getYanPan();
         return new ResultData();
     }
+    @GetMapping("/getYanPan2")
+    public ResultData getYanPan2() throws IOException {
+        yanPanService2.getYanPan();
+        return new ResultData();
+    }
+    @GetMapping("/getYanPan3")
+    public ResultData getYanPan3() throws IOException {
+        yanPanService3.getYanPan();
+        return new ResultData();
+    }
+
+    @GetMapping("/getYanPan4")
+    public ResultData getYanPan4() throws IOException {
+        yanPanService4.getYanPan();
+        return new ResultData();
+    }
+
 
 
 

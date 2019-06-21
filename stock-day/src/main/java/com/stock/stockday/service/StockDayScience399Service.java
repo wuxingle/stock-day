@@ -10,4 +10,6 @@ import java.util.List;
 
 public interface StockDayScience399Service extends IService<StockDayScience399> {
     List<StockDayScience399> selectByPage(Page<StockDayScience399> page, @Param("codeId")String codeId, @Param("codeEx")String codeEx);
+
+    List<StockDayScience399> selectByCodeAndEx(@Param("codeId")String codeId, @Param("codeEx")String codeEx);
 }

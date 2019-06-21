@@ -19,4 +19,9 @@ public class StockDayScience399Impl extends ServiceImpl<StockDayScience399Mapper
     public List<StockDayScience399> selectByPage(Page<StockDayScience399> page, String codeId, String codeEx) {
         return baseMapper.selectByPage(page,codeId,codeEx);
     }
+
+    @Override
+    public List<StockDayScience399> selectByCodeAndEx(String codeId, String codeEx) {
+        return baseMapper.selectByCodeAndEx(codeId,codeEx);
+    }
 }

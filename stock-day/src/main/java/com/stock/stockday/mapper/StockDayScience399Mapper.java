@@ -13,6 +13,8 @@ import java.util.List;
 public interface StockDayScience399Mapper extends BaseMapper<StockDayScience399> {
     List<StockDayScience399> selectByPage(Page<StockDayScience399> page, @Param("codeId")String codeId, @Param("codeEx")String codeEx);
 
+    List<StockDayScience399> selectByCodeAndEx(@Param("codeId")String codeId, @Param("codeEx")String codeEx);
+
     int insertSelective(StockDayScience399 record);
 
     int updateByPrimaryKeySelective(StockDayScience399 record);

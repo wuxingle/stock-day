@@ -4,6 +4,7 @@ import com.stock.apicommon.Constants;
 import com.stock.apicommon.entity.SunEntity;
 import com.stock.apicommon.entity.WuYunEntity;
 import com.stock.apicommon.vo.SunVo;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -28,6 +29,15 @@ public class SunUtil {
         List<SunEntity> sunEntityListjdst1 = new ArrayList<>();
         List<SunEntity> sunEntityListmuzi = new ArrayList<>();
         for (int i = 0; i < sunEntityList.size(); i++) {
+            if (StringUtils.isEmpty(sunEntityList.get(i).getRateOfChange())){
+                return sunVo;
+            }
+            if (StringUtils.isEmpty(sunEntityList.get(i).getClosingPrice())){
+                return sunVo;
+            }
+            if (StringUtils.isEmpty(sunEntityList.get(i).getOpeningPrice())){
+                return sunVo;
+            }
             if (i < 2) {
                 sunEntityListqkwl.add(sunEntityList.get(i));
                 sunEntityListmuzi.add(sunEntityList.get(i));
@@ -47,6 +57,7 @@ public class SunUtil {
 
         }
         //清空万里-乌云盖顶
+
         if (sunEntityListqkwl.get(1).getRateOfChange().compareTo(new BigDecimal(-1)) <0 &&sunEntityListqkwl.get(1).getOpeningPrice().compareTo(sunEntityListqkwl.get(1).getClosingPrice())>0) {//阴线
             if (sunEntityListqkwl.get(0).getOpeningPrice().compareTo(sunEntityListqkwl.get(1).getClosingPrice()) < 0) {//低开
                 if (sunEntityListqkwl.get(0).getClosingPrice().compareTo(sunEntityListqkwl.get(0).getOpeningPrice()) > 0) {//阳线
