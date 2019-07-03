@@ -309,7 +309,7 @@ public class FindService2Impl implements findService2 {
 
 
     @Override
-    public List<StockDayVo> U3ShengVDapan4() throws IOException {
+    public List<StockDayVo> dayYanPanFunction62() throws IOException {
         //获取所以编码
         List<StockCode> stockCodeList = stockCodeService.getStockCodeList();
         if (stockCodeList == null || stockCodeList.isEmpty()) {
@@ -378,7 +378,7 @@ public class FindService2Impl implements findService2 {
                             BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                             stockDayScienceList399001.add(stockDayScience);
                         }
-                        yanPanDayService.dayYanPanFunction(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                        yanPanDayService.dayYanPanFunction62(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     }
                     continue;
                 case "0001":
@@ -408,7 +408,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0002":
                     Page<StockDay0002> page02 = new Page<>(1, 60);
@@ -437,7 +437,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList1,stockDayScienceList1,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList1,stockDayScienceList1,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0003":
                     Page<StockDay0003> page03 = new Page<>(1, 60);
@@ -466,7 +466,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList3,stockDayScienceList3,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList3,stockDayScienceList3,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0004":
                     Page<StockDay0004> page04 = new Page<>(1, 60);
@@ -495,7 +495,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList4,stockDayScienceList4,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList4,stockDayScienceList4,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0005":
                     Page<StockDay0005> page05 = new Page<>(1, 60);
@@ -524,7 +524,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList5,stockDayScienceList5,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList5,stockDayScienceList5,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0006":
                     Page<StockDay0006> page06 = new Page<>(1, 60);
@@ -553,7 +553,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList6,stockDayScienceList6,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList6,stockDayScienceList6,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0007":
                     Page<StockDay0007> page07 = new Page<>(1, 60);
@@ -582,7 +582,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList7,stockDayScienceList7,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList7,stockDayScienceList7,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0008":
                     Page<StockDay0008> page08 = new Page<>(1, 60);
@@ -611,7 +611,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList8,stockDayScienceList8,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList8,stockDayScienceList8,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0009":
                     Page<StockDay0009> page09 = new Page<>(1, 60);
@@ -640,7 +640,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList9,stockDayScienceList9,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList9,stockDayScienceList9,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0020":
                     Page<StockDay0020> page20 = new Page<>(1, 60);
@@ -669,7 +669,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList20,stockDayScienceList20,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList20,stockDayScienceList20,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0021":
                     Page<StockDay0021> page21 = new Page<>(1, 60);
@@ -698,7 +698,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList21,stockDayScienceList21,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList21,stockDayScienceList21,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0022":
                     Page<StockDay0022> page22 = new Page<>(1, 60);
@@ -727,7 +727,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList22,stockDayScienceList22,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList22,stockDayScienceList22,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0023":
                     Page<StockDay0023> page23 = new Page<>(1, 60);
@@ -756,7 +756,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList23,stockDayScienceList23,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList23,stockDayScienceList23,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0024":
                     Page<StockDay0024> page24 = new Page<>(1, 60);
@@ -785,7 +785,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList24,stockDayScienceList24,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList24,stockDayScienceList24,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0025":
                     Page<StockDay0025> page25 = new Page<>(1, 60);
@@ -814,7 +814,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList25,stockDayScienceList25,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList25,stockDayScienceList25,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0026":
                     Page<StockDay0026> page26 = new Page<>(1, 60);
@@ -843,7 +843,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList26,stockDayScienceList26,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList26,stockDayScienceList26,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0027":
                     Page<StockDay0027> page27 = new Page<>(1, 60);
@@ -872,7 +872,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList27,stockDayScienceList27,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList27,stockDayScienceList27,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0028":
                     Page<StockDay0028> page28 = new Page<>(1, 60);
@@ -901,7 +901,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList28,stockDayScienceList28,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList28,stockDayScienceList28,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "3000":
                     Page<StockDay3000> page30 = new Page<>(1, 60);
@@ -930,7 +930,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList30,stockDayScienceList30,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList30,stockDayScienceList30,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3001":
                     Page<StockDay3001> page31 = new Page<>(1, 60);
@@ -959,7 +959,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList31,stockDayScienceList31,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList31,stockDayScienceList31,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3002":
                     Page<StockDay3002> page32 = new Page<>(1, 60);
@@ -988,7 +988,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList32,stockDayScienceList32,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList32,stockDayScienceList32,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3003":
                     Page<StockDay3003> page33 = new Page<>(1, 60);
@@ -1017,7 +1017,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList33,stockDayScienceList33,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList33,stockDayScienceList33,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3004":
                     Page<StockDay3004> page34 = new Page<>(1, 60);
@@ -1046,7 +1046,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList34,stockDayScienceList34,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList34,stockDayScienceList34,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3005":
                     Page<StockDay3005> page35 = new Page<>(1, 60);
@@ -1075,7 +1075,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList35,stockDayScienceList35,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList35,stockDayScienceList35,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "6000":
                     Page<StockDay6000> page60 = new Page<>(1, 60);
@@ -1104,7 +1104,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList60,stockDayScienceList60,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList60,stockDayScienceList60,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6001":
                     Page<StockDay6001> page61 = new Page<>(1, 60);
@@ -1133,7 +1133,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList61,stockDayScienceList61,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList61,stockDayScienceList61,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6002":
                     Page<StockDay6002> page62 = new Page<>(1, 60);
@@ -1162,7 +1162,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList62,stockDayScienceList62,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList62,stockDayScienceList62,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6003":
                     Page<StockDay6003> page63 = new Page<>(1, 60);
@@ -1191,7 +1191,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList63,stockDayScienceList63,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList63,stockDayScienceList63,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6004":
                     Page<StockDay6004> page64 = new Page<>(1, 60);
@@ -1220,7 +1220,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList64,stockDayScienceList64,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList64,stockDayScienceList64,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6005":
                     Page<StockDay6005> page65 = new Page<>(1, 60);
@@ -1249,7 +1249,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList65,stockDayScienceList65,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList65,stockDayScienceList65,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6006":
                     Page<StockDay6006> page66 = new Page<>(1, 60);
@@ -1278,7 +1278,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList66,stockDayScienceList66,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList66,stockDayScienceList66,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6007":
                     Page<StockDay6007> page67 = new Page<>(1, 60);
@@ -1307,7 +1307,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList67,stockDayScienceList67,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList67,stockDayScienceList67,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6008":
                     Page<StockDay6008> page68 = new Page<>(1, 60);
@@ -1336,7 +1336,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList68,stockDayScienceList68,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList68,stockDayScienceList68,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6009":
                     Page<StockDay6009> page69 = new Page<>(1, 60);
@@ -1365,7 +1365,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList69,stockDayScienceList69,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList69,stockDayScienceList69,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6010":
                     Page<StockDay6010> page610 = new Page<>(1, 60);
@@ -1394,7 +1394,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList610,stockDayScienceList610,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList610,stockDayScienceList610,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6011":
                     Page<StockDay6011> page611 = new Page<>(1, 60);
@@ -1423,7 +1423,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList611,stockDayScienceList611,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList611,stockDayScienceList611,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6012":
                     Page<StockDay6012> page612 = new Page<>(1, 60);
@@ -1452,7 +1452,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList612,stockDayScienceList612,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList612,stockDayScienceList612,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6013":
                     Page<StockDay6013> page613 = new Page<>(1, 60);
@@ -1481,7 +1481,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList613,stockDayScienceList613,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList613,stockDayScienceList613,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6014":
                     Page<StockDay6014> page614 = new Page<>(1, 60);
@@ -1510,7 +1510,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList614,stockDayScienceList614,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList614,stockDayScienceList614,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6015":
                     Page<StockDay6015> page615 = new Page<>(1, 60);
@@ -1539,7 +1539,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList615,stockDayScienceList615,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList615,stockDayScienceList615,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6016":
                     Page<StockDay6016> page616 = new Page<>(1, 60);
@@ -1568,7 +1568,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList616,stockDayScienceList616,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList616,stockDayScienceList616,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6017":
                     Page<StockDay6017> page617 = new Page<>(1, 60);
@@ -1597,7 +1597,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList617,stockDayScienceList617,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList617,stockDayScienceList617,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6018":
                     Page<StockDay6018> page618 = new Page<>(1, 60);
@@ -1626,7 +1626,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList618,stockDayScienceList618,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList618,stockDayScienceList618,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6019":
                     Page<StockDay6019> page619 = new Page<>(1, 60);
@@ -1655,7 +1655,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList619,stockDayScienceList619,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction62(stockDayAllList619,stockDayScienceList619,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 default:
                     switch (stockCode.getId().substring(0, 3)) {
@@ -1686,7 +1686,7 @@ public class FindService2Impl implements findService2 {
                                 BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                                 stockDayScienceList399001.add(stockDayScience);
                             }
-                            yanPanDayService.dayYanPanFunction(stockDayAllList001,stockDayScienceList001,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                            yanPanDayService.dayYanPanFunction62(stockDayAllList001,stockDayScienceList001,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                             continue;
                         case "603":
                             Page<StockDay603> page603 = new Page<>(1, 60);
@@ -1715,7 +1715,7 @@ public class FindService2Impl implements findService2 {
                                 BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                                 stockDayScienceList0001.add(stockDayScience);
                             }
-                            yanPanDayService.dayYanPanFunction(stockDayAllList603,stockDayScienceList603,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                            yanPanDayService.dayYanPanFunction62(stockDayAllList603,stockDayScienceList603,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                             continue;
                         default:
                             continue;
@@ -1726,7 +1726,7 @@ public class FindService2Impl implements findService2 {
     }
 
     @Override
-    public List<StockDayVo> U3shengVDapan2() throws IOException {
+    public List<StockDayVo> dayYanPanFunction65() throws IOException {
         //获取所以编码
         List<StockCode> stockCodeList = stockCodeService.getStockCodeList();
         if (stockCodeList == null || stockCodeList.isEmpty()) {
@@ -1795,7 +1795,7 @@ public class FindService2Impl implements findService2 {
                             BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                             stockDayScienceList399001.add(stockDayScience);
                         }
-                        yanPanDayService.u3Shengv2(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                        yanPanDayService.dayYanPanFunction65(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     }
                     continue;
                 case "0001":
@@ -1825,7 +1825,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList,stockDayScienceList,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0002":
                     Page<StockDay0002> page02 = new Page<>(1, 60);
@@ -1854,7 +1854,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList1,stockDayScienceList1,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList1,stockDayScienceList1,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0003":
                     Page<StockDay0003> page03 = new Page<>(1, 60);
@@ -1883,7 +1883,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList3,stockDayScienceList3,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList3,stockDayScienceList3,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0004":
                     Page<StockDay0004> page04 = new Page<>(1, 60);
@@ -1912,7 +1912,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList4,stockDayScienceList4,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList4,stockDayScienceList4,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0005":
                     Page<StockDay0005> page05 = new Page<>(1, 60);
@@ -1941,7 +1941,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList5,stockDayScienceList5,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList5,stockDayScienceList5,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0006":
                     Page<StockDay0006> page06 = new Page<>(1, 60);
@@ -1970,7 +1970,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList6,stockDayScienceList6,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList6,stockDayScienceList6,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0007":
                     Page<StockDay0007> page07 = new Page<>(1, 60);
@@ -1999,7 +1999,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList7,stockDayScienceList7,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList7,stockDayScienceList7,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0008":
                     Page<StockDay0008> page08 = new Page<>(1, 60);
@@ -2028,7 +2028,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList8,stockDayScienceList8,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList8,stockDayScienceList8,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0009":
                     Page<StockDay0009> page09 = new Page<>(1, 60);
@@ -2057,7 +2057,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList9,stockDayScienceList9,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList9,stockDayScienceList9,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                     continue;
                 case "0020":
                     Page<StockDay0020> page20 = new Page<>(1, 60);
@@ -2086,7 +2086,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList20,stockDayScienceList20,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList20,stockDayScienceList20,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0021":
                     Page<StockDay0021> page21 = new Page<>(1, 60);
@@ -2115,7 +2115,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList21,stockDayScienceList21,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList21,stockDayScienceList21,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0022":
                     Page<StockDay0022> page22 = new Page<>(1, 60);
@@ -2144,7 +2144,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList22,stockDayScienceList22,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList22,stockDayScienceList22,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0023":
                     Page<StockDay0023> page23 = new Page<>(1, 60);
@@ -2173,7 +2173,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList23,stockDayScienceList23,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList23,stockDayScienceList23,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0024":
                     Page<StockDay0024> page24 = new Page<>(1, 60);
@@ -2202,7 +2202,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList24,stockDayScienceList24,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList24,stockDayScienceList24,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0025":
                     Page<StockDay0025> page25 = new Page<>(1, 60);
@@ -2231,7 +2231,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList25,stockDayScienceList25,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList25,stockDayScienceList25,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0026":
                     Page<StockDay0026> page26 = new Page<>(1, 60);
@@ -2260,7 +2260,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList26,stockDayScienceList26,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList26,stockDayScienceList26,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0027":
                     Page<StockDay0027> page27 = new Page<>(1, 60);
@@ -2289,7 +2289,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList27,stockDayScienceList27,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList27,stockDayScienceList27,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "0028":
                     Page<StockDay0028> page28 = new Page<>(1, 60);
@@ -2318,7 +2318,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399005.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList28,stockDayScienceList28,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList28,stockDayScienceList28,stockDayAllList399005,stockDayScienceList399005,stockDayVoList);
                     continue;
                 case "3000":
                     Page<StockDay3000> page30 = new Page<>(1, 60);
@@ -2347,7 +2347,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList30,stockDayScienceList30,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList30,stockDayScienceList30,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3001":
                     Page<StockDay3001> page31 = new Page<>(1, 60);
@@ -2376,7 +2376,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList31,stockDayScienceList31,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList31,stockDayScienceList31,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3002":
                     Page<StockDay3002> page32 = new Page<>(1, 60);
@@ -2405,7 +2405,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList32,stockDayScienceList32,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList32,stockDayScienceList32,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3003":
                     Page<StockDay3003> page33 = new Page<>(1, 60);
@@ -2434,7 +2434,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList33,stockDayScienceList33,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList33,stockDayScienceList33,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3004":
                     Page<StockDay3004> page34 = new Page<>(1, 60);
@@ -2463,7 +2463,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList34,stockDayScienceList34,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList34,stockDayScienceList34,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "3005":
                     Page<StockDay3005> page35 = new Page<>(1, 60);
@@ -2492,7 +2492,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                         stockDayScienceList399006.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList35,stockDayScienceList35,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList35,stockDayScienceList35,stockDayAllList399006,stockDayScienceList399006,stockDayVoList);
                     continue;
                 case "6000":
                     Page<StockDay6000> page60 = new Page<>(1, 60);
@@ -2521,7 +2521,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList60,stockDayScienceList60,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList60,stockDayScienceList60,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6001":
                     Page<StockDay6001> page61 = new Page<>(1, 60);
@@ -2550,7 +2550,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList61,stockDayScienceList61,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList61,stockDayScienceList61,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6002":
                     Page<StockDay6002> page62 = new Page<>(1, 60);
@@ -2579,7 +2579,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList62,stockDayScienceList62,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList62,stockDayScienceList62,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6003":
                     Page<StockDay6003> page63 = new Page<>(1, 60);
@@ -2608,7 +2608,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList63,stockDayScienceList63,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList63,stockDayScienceList63,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6004":
                     Page<StockDay6004> page64 = new Page<>(1, 60);
@@ -2637,7 +2637,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList64,stockDayScienceList64,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList64,stockDayScienceList64,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6005":
                     Page<StockDay6005> page65 = new Page<>(1, 60);
@@ -2666,7 +2666,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList65,stockDayScienceList65,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList65,stockDayScienceList65,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6006":
                     Page<StockDay6006> page66 = new Page<>(1, 60);
@@ -2695,7 +2695,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList66,stockDayScienceList66,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList66,stockDayScienceList66,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6007":
                     Page<StockDay6007> page67 = new Page<>(1, 60);
@@ -2724,7 +2724,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList67,stockDayScienceList67,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList67,stockDayScienceList67,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6008":
                     Page<StockDay6008> page68 = new Page<>(1, 60);
@@ -2753,7 +2753,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList68,stockDayScienceList68,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList68,stockDayScienceList68,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6009":
                     Page<StockDay6009> page69 = new Page<>(1, 60);
@@ -2782,7 +2782,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList69,stockDayScienceList69,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList69,stockDayScienceList69,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6010":
                     Page<StockDay6010> page610 = new Page<>(1, 60);
@@ -2811,7 +2811,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList610,stockDayScienceList610,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList610,stockDayScienceList610,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6011":
                     Page<StockDay6011> page611 = new Page<>(1, 60);
@@ -2840,7 +2840,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList611,stockDayScienceList611,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList611,stockDayScienceList611,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6012":
                     Page<StockDay6012> page612 = new Page<>(1, 60);
@@ -2869,7 +2869,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList612,stockDayScienceList612,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList612,stockDayScienceList612,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6013":
                     Page<StockDay6013> page613 = new Page<>(1, 60);
@@ -2898,7 +2898,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList613,stockDayScienceList613,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList613,stockDayScienceList613,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6014":
                     Page<StockDay6014> page614 = new Page<>(1, 60);
@@ -2927,7 +2927,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList614,stockDayScienceList614,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList614,stockDayScienceList614,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6015":
                     Page<StockDay6015> page615 = new Page<>(1, 60);
@@ -2956,7 +2956,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList615,stockDayScienceList615,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList615,stockDayScienceList615,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6016":
                     Page<StockDay6016> page616 = new Page<>(1, 60);
@@ -2985,7 +2985,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList616,stockDayScienceList616,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList616,stockDayScienceList616,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6017":
                     Page<StockDay6017> page617 = new Page<>(1, 60);
@@ -3014,7 +3014,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList617,stockDayScienceList617,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList617,stockDayScienceList617,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6018":
                     Page<StockDay6018> page618 = new Page<>(1, 60);
@@ -3043,7 +3043,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList618,stockDayScienceList618,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList618,stockDayScienceList618,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 case "6019":
                     Page<StockDay6019> page619 = new Page<>(1, 60);
@@ -3072,7 +3072,7 @@ public class FindService2Impl implements findService2 {
                         BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                         stockDayScienceList0001.add(stockDayScience);
                     }
-                    yanPanDayService.u3Shengv2(stockDayAllList619,stockDayScienceList619,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                    yanPanDayService.dayYanPanFunction65(stockDayAllList619,stockDayScienceList619,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                     continue;
                 default:
                     switch (stockCode.getId().substring(0, 3)) {
@@ -3103,7 +3103,7 @@ public class FindService2Impl implements findService2 {
                                 BeanUtils.copyProperties(stockDayScience399,stockDayScience);
                                 stockDayScienceList399001.add(stockDayScience);
                             }
-                            yanPanDayService.u3Shengv2(stockDayAllList001,stockDayScienceList001,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
+                            yanPanDayService.dayYanPanFunction65(stockDayAllList001,stockDayScienceList001,stockDayAllList399001,stockDayScienceList399001,stockDayVoList);
                             continue;
                         case "603":
                             Page<StockDay603> page603 = new Page<>(1, 60);
@@ -3132,7 +3132,7 @@ public class FindService2Impl implements findService2 {
                                 BeanUtils.copyProperties(stockDayScience0000,stockDayScience);
                                 stockDayScienceList0001.add(stockDayScience);
                             }
-                            yanPanDayService.u3Shengv2(stockDayAllList603,stockDayScienceList603,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
+                            yanPanDayService.dayYanPanFunction65(stockDayAllList603,stockDayScienceList603,stockDayAllList0001,stockDayScienceList0001,stockDayVoList);
                             continue;
                         default:
                             continue;

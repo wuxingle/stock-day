@@ -9,10 +9,14 @@ import com.stock.stockday.entity.StockDayAll;
 import com.stock.stockday.entity.StockDayScience;
 import com.stock.stockday.entity.StockDayYanPan1;
 import com.stock.stockday.service.find2.StockDayYanPan1Service;
-import com.stock.stockday.util.FindUtil2;
-import com.stock.stockday.util.FindUtil3;
-import com.stock.stockday.util.FindUtil4;
-import com.stock.stockday.util.FindUtil5;
+import com.stock.stockday.util.FindUtil30;
+import com.stock.stockday.util.FindUtil31;
+import com.stock.stockday.util.FindUtil32;
+import com.stock.stockday.util.FindUtil33;
+import com.stock.stockday.util.FindUtil34;
+import com.stock.stockday.util.FindUtil35;
+import com.stock.stockday.util.FindUtil36;
+import com.stock.stockday.util.FindUtil37;
 import com.stock.stockday.util.FindUtil6;
 import com.stock.stockday.util.FindUtil7;
 import com.stock.stockday.util.FindUtil8;
@@ -257,23 +261,196 @@ public class YanPanDayServiceImpl2 {
                 boolean flag211= FindUtil8.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
                 boolean flag212= FindUtil8.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
                 boolean flag213= FindUtil8.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag214= FindUtil8.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag215= FindUtil8.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag216= FindUtil8.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag217= FindUtil8.jieQiDapan7(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag218= FindUtil8.jieQiDapan8(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag219= FindUtil8.jieQiDapan9(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag220= FindUtil8.jieQiDapan10(stockDayAllList2,stockDayAllListDaPan1);
 
-                boolean flag214= FindUtil9.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag215= FindUtil9.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag216= FindUtil9.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag217= FindUtil9.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag218= FindUtil9.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag219= FindUtil9.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag220= FindUtil9.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag221= FindUtil9.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag222= FindUtil9.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag223= FindUtil9.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag224= FindUtil9.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag225= FindUtil9.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag226= FindUtil9.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag227= FindUtil9.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag228= FindUtil9.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
-                boolean flag229= FindUtil9.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag223= FindUtil9.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag224= FindUtil9.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag225= FindUtil9.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag226= FindUtil9.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag227= FindUtil9.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag228= FindUtil9.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag229= FindUtil9.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag754= FindUtil9.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag755= FindUtil9.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag756= FindUtil9.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag757= FindUtil9.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag758= FindUtil9.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag759= FindUtil9.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag760= FindUtil9.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag761= FindUtil9.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag762= FindUtil9.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag907= FindUtil9.reset20Dapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag763= FindUtil9.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag764= FindUtil9.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag765= FindUtil9.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+
+                boolean flag766= FindUtil30.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag767= FindUtil30.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag768= FindUtil30.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag769= FindUtil30.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag770= FindUtil30.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag771= FindUtil30.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag772= FindUtil30.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag773= FindUtil30.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag774= FindUtil30.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag775= FindUtil30.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag776= FindUtil30.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag777= FindUtil30.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag778= FindUtil30.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag779= FindUtil30.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag780= FindUtil30.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag781= FindUtil30.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag908= FindUtil30.reset20Dapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag782= FindUtil30.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag783= FindUtil30.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag784= FindUtil30.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+
+                boolean flag785= FindUtil31.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag786= FindUtil31.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag787= FindUtil31.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag788= FindUtil31.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag789= FindUtil31.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag790= FindUtil31.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag791= FindUtil31.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+
+
+                boolean flag792= FindUtil32.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag793= FindUtil32.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag794= FindUtil32.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag795= FindUtil32.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag796= FindUtil32.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag797= FindUtil32.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag798= FindUtil32.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag799= FindUtil32.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag800= FindUtil32.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag801= FindUtil32.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag802= FindUtil32.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag803= FindUtil32.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag804= FindUtil32.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag805= FindUtil32.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag806= FindUtil32.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag807= FindUtil32.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag808= FindUtil32.reset20Dapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag809= FindUtil32.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag810= FindUtil32.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag811= FindUtil32.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag812= FindUtil32.jieQiDapan7(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag813= FindUtil32.jieQiDapan8(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag814= FindUtil32.jieQiDapan9(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag815= FindUtil32.jieQiDapan10(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag816= FindUtil32.jieQiDapan11(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag817= FindUtil32.jieQiDapan12(stockDayAllList2,stockDayAllListDaPan1);
+
+
+                boolean flag818= FindUtil33.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag819= FindUtil33.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag820= FindUtil33.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag821= FindUtil33.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag822= FindUtil33.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag823= FindUtil33.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag824= FindUtil33.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag825= FindUtil33.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag826= FindUtil33.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag827= FindUtil33.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag828= FindUtil33.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag829= FindUtil33.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag830= FindUtil33.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag831= FindUtil33.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag832= FindUtil33.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag833= FindUtil33.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag834= FindUtil33.reset20Dapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag835= FindUtil33.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag836= FindUtil33.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag837= FindUtil33.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag838= FindUtil33.jieQiDapan7(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag839= FindUtil33.jieQiDapan8(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag840= FindUtil33.jieQiDapan9(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag841= FindUtil33.jieQiDapan10(stockDayAllList2,stockDayAllListDaPan1);
+
+                boolean flag842= FindUtil34.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag843= FindUtil34.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag844= FindUtil34.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag845= FindUtil34.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag846= FindUtil34.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag847= FindUtil34.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag848= FindUtil34.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag849= FindUtil34.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag850= FindUtil34.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag851= FindUtil34.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag852= FindUtil34.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag853= FindUtil34.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag854= FindUtil34.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag855= FindUtil34.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag856= FindUtil34.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag857= FindUtil34.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag909= FindUtil34.reset20Dapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag858= FindUtil34.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag859= FindUtil34.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag860= FindUtil34.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+
+
+                boolean flag861= FindUtil35.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag862= FindUtil35.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag863= FindUtil35.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag864= FindUtil35.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag865= FindUtil35.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag866= FindUtil35.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag867= FindUtil35.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag868= FindUtil35.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag869= FindUtil35.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag870= FindUtil35.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag871= FindUtil35.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag872= FindUtil35.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag873= FindUtil35.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag874= FindUtil35.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag875= FindUtil35.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag876= FindUtil35.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag877= FindUtil35.reset20Dapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag878= FindUtil35.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag879= FindUtil35.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag880= FindUtil35.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+
+                boolean flag881= FindUtil36.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag882= FindUtil36.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag883= FindUtil36.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag884= FindUtil36.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag885= FindUtil36.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag886= FindUtil36.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag887= FindUtil36.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag888= FindUtil36.duoTuXiangShangDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag889= FindUtil36.shengVDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag890= FindUtil36.reset20Dapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag891= FindUtil36.jieQiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag892= FindUtil36.jishujieqiDapan5(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag893= FindUtil36.jishujieqiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag894= FindUtil36.jishujieqiDapan7(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag895= FindUtil36.duoTuXiangShangDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag896= FindUtil36.shengVDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag910= FindUtil36.reset20Dapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag897= FindUtil36.jieQiDapan6(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag898= FindUtil36.jishujieqiDapan8(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag899= FindUtil36.jishujieqiDapan9(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag911= FindUtil36.jieQiDapan7(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag912= FindUtil36.jieQiDapan8(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag913= FindUtil36.jieQiDapan9(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag914= FindUtil36.jieQiDapan10(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag915= FindUtil36.jieQiDapan11(stockDayAllList2,stockDayAllListDaPan1);
+                boolean flag916= FindUtil36.jieQiDapan12(stockDayAllList2,stockDayAllListDaPan1);
+
+                boolean flag900= FindUtil37.duoTuXiangShangDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag901= FindUtil37.shengVDapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag902= FindUtil37.reset20Dapan2(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag903= FindUtil37.jieQiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag904= FindUtil37.jishujieqiDapan3(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag905= FindUtil37.jishujieqiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+                boolean flag906= FindUtil37.jieQiDapan4(stockDayAllList2,scienceEntityList,stockDayAllListDaPan1);
+
 
                 if (flag138){
                     updateYanPan("138",yanPanVo);
@@ -501,12 +678,6 @@ public class YanPanDayServiceImpl2 {
                 if (flag220){
                     updateYanPan("220",yanPanVo);
                 }
-                if (flag221){
-                    updateYanPan("221",yanPanVo);
-                }
-                if (flag222){
-                    updateYanPan("222",yanPanVo);
-                }
                 if (flag223){
                     updateYanPan("223",yanPanVo);
                 }
@@ -528,6 +699,499 @@ public class YanPanDayServiceImpl2 {
                 if (flag229){
                     updateYanPan("229",yanPanVo);
                 }
+
+                if (flag754){
+                    updateYanPan("754",yanPanVo);
+                }
+                if (flag755){
+                    updateYanPan("755",yanPanVo);
+                }
+                if (flag756){
+                    updateYanPan("756",yanPanVo);
+                }
+                if (flag757){
+                    updateYanPan("757",yanPanVo);
+                }
+                if (flag758){
+                    updateYanPan("758",yanPanVo);
+                }
+                if (flag759){
+                    updateYanPan("759",yanPanVo);
+                }
+                if (flag760){
+                    updateYanPan("760",yanPanVo);
+                }
+                if (flag761){
+                    updateYanPan("761",yanPanVo);
+                }
+                if (flag762){
+                    updateYanPan("762",yanPanVo);
+                }
+                if (flag763){
+                    updateYanPan("763",yanPanVo);
+                }
+                if (flag764){
+                    updateYanPan("764",yanPanVo);
+                }
+                if (flag765){
+                    updateYanPan("765",yanPanVo);
+                }
+                if (flag766){
+                    updateYanPan("766",yanPanVo);
+                }
+                if (flag767){
+                    updateYanPan("767",yanPanVo);
+                }
+                if (flag768){
+                    updateYanPan("768",yanPanVo);
+                }
+                if (flag769){
+                    updateYanPan("769",yanPanVo);
+                }
+                if (flag770){
+                    updateYanPan("770",yanPanVo);
+                }
+                if (flag771){
+                    updateYanPan("771",yanPanVo);
+                }
+                if (flag772){
+                    updateYanPan("772",yanPanVo);
+                }
+                if (flag773){
+                    updateYanPan("773",yanPanVo);
+                }
+                if (flag774){
+                    updateYanPan("774",yanPanVo);
+                }
+                if (flag775){
+                    updateYanPan("775",yanPanVo);
+                }
+                if (flag776){
+                    updateYanPan("776",yanPanVo);
+                }
+                if (flag777){
+                    updateYanPan("777",yanPanVo);
+                }
+                if (flag778){
+                    updateYanPan("778",yanPanVo);
+                }
+
+                if (flag779){
+                    updateYanPan("779",yanPanVo);
+                }
+                if (flag780){
+                    updateYanPan("780",yanPanVo);
+                }
+                if (flag781){
+                    updateYanPan("781",yanPanVo);
+                }
+                if (flag782){
+                    updateYanPan("782",yanPanVo);
+                }
+                if (flag783){
+                    updateYanPan("783",yanPanVo);
+                }
+                if (flag784){
+                    updateYanPan("784",yanPanVo);
+                }
+                if (flag785){
+                    updateYanPan("785",yanPanVo);
+                }
+                if (flag786){
+                    updateYanPan("786",yanPanVo);
+                }
+                if (flag787){
+                    updateYanPan("787",yanPanVo);
+                }
+                if (flag788){
+                    updateYanPan("788",yanPanVo);
+                }
+                if (flag789){
+                    updateYanPan("789",yanPanVo);
+                }
+                if (flag790){
+                    updateYanPan("790",yanPanVo);
+                }
+                if (flag791){
+                    updateYanPan("791",yanPanVo);
+                }
+                if (flag792){
+                    updateYanPan("792",yanPanVo);
+                }
+                if (flag793){
+                    updateYanPan("793",yanPanVo);
+                }
+                if (flag794){
+                    updateYanPan("794",yanPanVo);
+                }
+                if (flag795){
+                    updateYanPan("795",yanPanVo);
+                }
+                if (flag796){
+                    updateYanPan("796",yanPanVo);
+                }
+                if (flag797){
+                    updateYanPan("797",yanPanVo);
+                }
+                if (flag798){
+                    updateYanPan("798",yanPanVo);
+                }
+                if (flag799){
+                    updateYanPan("799",yanPanVo);
+                }
+                if (flag800){
+                    updateYanPan("800",yanPanVo);
+                }
+                if (flag801){
+                    updateYanPan("801",yanPanVo);
+                }
+                if (flag802){
+                    updateYanPan("802",yanPanVo);
+                }
+                if (flag803){
+                    updateYanPan("803",yanPanVo);
+                }
+                if (flag804){
+                    updateYanPan("804",yanPanVo);
+                }
+                if (flag805){
+                    updateYanPan("805",yanPanVo);
+                }
+                if (flag806){
+                    updateYanPan("806",yanPanVo);
+                }
+                if (flag807){
+                    updateYanPan("807",yanPanVo);
+                }
+                if (flag808){
+                    updateYanPan("808",yanPanVo);
+                }
+                if (flag809){
+                    updateYanPan("809",yanPanVo);
+                }
+                if (flag810){
+                    updateYanPan("810",yanPanVo);
+                }
+                if (flag811){
+                    updateYanPan("811",yanPanVo);
+                }
+                if (flag812){
+                    updateYanPan("812",yanPanVo);
+                }
+                if (flag813){
+                    updateYanPan("813",yanPanVo);
+                }
+                if (flag814){
+                    updateYanPan("814",yanPanVo);
+                }
+                if (flag815){
+                    updateYanPan("815",yanPanVo);
+                }
+                if (flag816){
+                    updateYanPan("816",yanPanVo);
+                }
+                if (flag817){
+                    updateYanPan("817",yanPanVo);
+                }
+                if (flag818){
+                    updateYanPan("818",yanPanVo);
+                }
+                if (flag819){
+                    updateYanPan("819",yanPanVo);
+                }
+                if (flag820){
+                    updateYanPan("820",yanPanVo);
+                }
+                if (flag821){
+                    updateYanPan("821",yanPanVo);
+                }
+                if (flag822){
+                    updateYanPan("822",yanPanVo);
+                }
+                if (flag823){
+                    updateYanPan("823",yanPanVo);
+                }
+                if (flag824){
+                    updateYanPan("824",yanPanVo);
+                }
+                if (flag825){
+                    updateYanPan("825",yanPanVo);
+                }
+                if (flag826){
+                    updateYanPan("826",yanPanVo);
+                }
+                if (flag827){
+                    updateYanPan("827",yanPanVo);
+                }
+                if (flag828){
+                    updateYanPan("828",yanPanVo);
+                }
+                if (flag829){
+                    updateYanPan("829",yanPanVo);
+                }
+                if (flag830){
+                    updateYanPan("830",yanPanVo);
+                }
+                if (flag831){
+                    updateYanPan("831",yanPanVo);
+                }
+                if (flag832){
+                    updateYanPan("832",yanPanVo);
+                }
+                if (flag833){
+                    updateYanPan("833",yanPanVo);
+                }
+                if (flag834){
+                    updateYanPan("834",yanPanVo);
+                }
+                if (flag835){
+                    updateYanPan("835",yanPanVo);
+                }
+                if (flag836){
+                    updateYanPan("836",yanPanVo);
+                }
+                if (flag837){
+                    updateYanPan("837",yanPanVo);
+                }
+                if (flag838){
+                    updateYanPan("838",yanPanVo);
+                }
+                if (flag839){
+                    updateYanPan("839",yanPanVo);
+                }
+                if (flag840){
+                    updateYanPan("840",yanPanVo);
+                }
+                if (flag841){
+                    updateYanPan("841",yanPanVo);
+                }
+                if (flag842){
+                    updateYanPan("842",yanPanVo);
+                }
+                if (flag843){
+                    updateYanPan("843",yanPanVo);
+                }
+                if (flag844){
+                    updateYanPan("844",yanPanVo);
+                }
+                if (flag845){
+                    updateYanPan("845",yanPanVo);
+                }
+                if (flag846){
+                    updateYanPan("846",yanPanVo);
+                }
+                if (flag847){
+                    updateYanPan("847",yanPanVo);
+                }
+                if (flag848){
+                    updateYanPan("848",yanPanVo);
+                }
+                if (flag849){
+                    updateYanPan("849",yanPanVo);
+                }
+                if (flag850){
+                    updateYanPan("850",yanPanVo);
+                }
+                if (flag851){
+                    updateYanPan("851",yanPanVo);
+                }
+                if (flag852){
+                    updateYanPan("852",yanPanVo);
+                }
+                if (flag853){
+                    updateYanPan("853",yanPanVo);
+                }
+                if (flag854){
+                    updateYanPan("854",yanPanVo);
+                }
+                if (flag855){
+                    updateYanPan("855",yanPanVo);
+                }
+                if (flag856){
+                    updateYanPan("856",yanPanVo);
+                }
+                if (flag857){
+                    updateYanPan("857",yanPanVo);
+                }
+                if (flag858){
+                    updateYanPan("858",yanPanVo);
+                }
+                if (flag859){
+                    updateYanPan("859",yanPanVo);
+                }
+                if (flag860){
+                    updateYanPan("860",yanPanVo);
+                }
+                if (flag861){
+                    updateYanPan("861",yanPanVo);
+                }
+                if (flag862){
+                    updateYanPan("862",yanPanVo);
+                }
+                if (flag863){
+                    updateYanPan("863",yanPanVo);
+                }
+                if (flag864){
+                    updateYanPan("864",yanPanVo);
+                }
+                if (flag865){
+                    updateYanPan("865",yanPanVo);
+                }
+                if (flag866){
+                    updateYanPan("866",yanPanVo);
+                }
+                if (flag867){
+                    updateYanPan("867",yanPanVo);
+                }
+                if (flag868){
+                    updateYanPan("868",yanPanVo);
+                }
+                if (flag869){
+                    updateYanPan("869",yanPanVo);
+                }
+                if (flag870){
+                    updateYanPan("870",yanPanVo);
+                }
+                if (flag871){
+                    updateYanPan("871",yanPanVo);
+                }
+                if (flag872){
+                    updateYanPan("872",yanPanVo);
+                }
+                if (flag873){
+                    updateYanPan("873",yanPanVo);
+                }
+                if (flag874){
+                    updateYanPan("874",yanPanVo);
+                }
+                if (flag875){
+                    updateYanPan("875",yanPanVo);
+                }
+                if (flag876){
+                    updateYanPan("876",yanPanVo);
+                }
+                if (flag877){
+                    updateYanPan("877",yanPanVo);
+                }
+                if (flag878){
+                    updateYanPan("878",yanPanVo);
+                }
+
+                if (flag879){
+                    updateYanPan("879",yanPanVo);
+                }
+                if (flag880){
+                    updateYanPan("880",yanPanVo);
+                }
+                if (flag881){
+                    updateYanPan("881",yanPanVo);
+                }
+                if (flag882){
+                    updateYanPan("882",yanPanVo);
+                }
+                if (flag883){
+                    updateYanPan("883",yanPanVo);
+                }
+                if (flag884){
+                    updateYanPan("884",yanPanVo);
+                }
+                if (flag885){
+                    updateYanPan("885",yanPanVo);
+                }
+                if (flag886){
+                    updateYanPan("886",yanPanVo);
+                }
+                if (flag887){
+                    updateYanPan("887",yanPanVo);
+                }
+                if (flag888){
+                    updateYanPan("888",yanPanVo);
+                }
+                if (flag889){
+                    updateYanPan("889",yanPanVo);
+                }
+                if (flag890){
+                    updateYanPan("890",yanPanVo);
+                }
+                if (flag891){
+                    updateYanPan("891",yanPanVo);
+                }
+                if (flag892){
+                    updateYanPan("892",yanPanVo);
+                }
+                if (flag893){
+                    updateYanPan("893",yanPanVo);
+                }
+                if (flag894){
+                    updateYanPan("894",yanPanVo);
+                }
+                if (flag895){
+                    updateYanPan("895",yanPanVo);
+                }
+                if (flag896){
+                    updateYanPan("896",yanPanVo);
+                }
+                if (flag897){
+                    updateYanPan("897",yanPanVo);
+                }
+                if (flag898){
+                    updateYanPan("898",yanPanVo);
+                }
+                if (flag899){
+                    updateYanPan("899",yanPanVo);
+                }
+                if (flag900){
+                    updateYanPan("900",yanPanVo);
+                }
+                if (flag901){
+                    updateYanPan("901",yanPanVo);
+                }
+                if (flag902){
+                    updateYanPan("902",yanPanVo);
+                }
+                if (flag903){
+                    updateYanPan("903",yanPanVo);
+                }
+                if (flag904){
+                    updateYanPan("904",yanPanVo);
+                }
+                if (flag905){
+                    updateYanPan("905",yanPanVo);
+                }
+                if (flag906){
+                    updateYanPan("906",yanPanVo);
+                }
+                if (flag907){
+                    updateYanPan("907",yanPanVo);
+                }
+                if (flag908){
+                    updateYanPan("908",yanPanVo);
+                }
+                if (flag909){
+                    updateYanPan("909",yanPanVo);
+                }
+                if (flag910){
+                    updateYanPan("910",yanPanVo);
+                }
+                if (flag911){
+                    updateYanPan("911",yanPanVo);
+                }
+                if (flag912){
+                    updateYanPan("912",yanPanVo);
+                }
+                if (flag913){
+                    updateYanPan("913",yanPanVo);
+                }
+                if (flag914){
+                    updateYanPan("914",yanPanVo);
+                }
+                if (flag915){
+                    updateYanPan("915",yanPanVo);
+                }
+                if (flag916){
+                    updateYanPan("916",yanPanVo);
+                }
+
 
                 stockDayAllList1.remove(0);
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>列表</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="content">
+        <h3 class="form-title">列表</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                   <tr style="background-color: aqua">
+                       <th style="width: 70px">名称</th>
+                       <th style="width: 70px">编码</th>
+                       <th style="width: 70px">日期</th>
+                       <th style="width: 70px">1日上涨</th>
+                       <th style="width: 70px">1上涨概率</th>
+                       <th style="width: 70px">2日上涨</th>
+                       <th style="width: 70px">2上涨概率</th>
+                       <th style="width: 70px">3日上涨</th>
+                       <th style="width: 70px">3上涨概率</th>
+                       <th style="width: 70px">5日上涨</th>
+                       <th style="width: 70px">5上涨概率</th>
+                       <th style="width: 70px">8日上涨</th>
+                       <th style="width: 70px">8上涨概率</th>
+                       <th style="width: 70px">13日上涨</th>
+                       <th style="width: 70px">13上涨概率</th>
+                       <th style="width: 70px">20日上涨</th>
+                       <th style="width: 70px">20上涨概率</th>
+                       <th style="width: 70px">2日净上涨</th>
+                   </tr>
+                </thead>
+                <tbody id="container">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    //定义一个全局的数组信息
+    var g_itemList=[];
+ jQuery(document).ready(function () {
+         $.ajax({
+             type:"GET",
+             url:"http://localhost:8880/api-d/day/v1/dayYanPanFunction100",
+             xhrFields:{withCredentials:true},
+             success:function (data) {
+                 if (data.code==200){
+                     g_itemList=data.data;
+                     reloadDom();
+                     alert("获取商品信息成功");
+                 } else {
+                    alert("获取商品信息失败,"+data.message)
+                 }
+             },
+             error:function (data) {
+                alert("获取商品信息失败,原因为"+data.responseText);
+             }
+         });
+ });
+ function reloadDom() {
+    for (var i=0;i<g_itemList.length;i++){
+        var itemVo=g_itemList[i];
+        var count=i%2;
+        var dom="<tr data-id='"+itemVo.code+"' id='itemDetail"+itemVo.code+"'  style='background-color: chartreuse '>" +
+            "<td>"+itemVo.name+"</td><td>"+itemVo.code+"</td><td>"+itemVo.date+"</td><td>"+itemVo.shangZhangMa1+"</td><td>"+itemVo.shangZhangRate1+"</td><td>"+itemVo.shangZhangMa2+"</td>" +
+            "<td>"+itemVo.shangZhangRate2+"</td><td>"+itemVo.shangZhangMa3+"</td><td>"+itemVo.shangZhangRate3+"</td><td>"+itemVo.shangZhangMa5+"</td><td>"+itemVo.shangZhangRate5+"</td>" +
+            "<td>"+itemVo.shangZhangMa8+"</td><td>"+itemVo.shangZhangRate8+"</td><td>"+itemVo.shangZhangMa13+"</td><td>"+itemVo.shangZhangRate13+"</td><td>"+itemVo.shangZhangMa20+"</td><td>"+itemVo.shangZhangRate20+"</td>" +
+            "<td>"+itemVo.changeOf2+"</td></tr>";
+        $("#container").append(dom);
+        $("#itemDetail"+itemVo.code).on("click",function (e) {
+
+        })
+    }
+ }
+</script>
+</html>

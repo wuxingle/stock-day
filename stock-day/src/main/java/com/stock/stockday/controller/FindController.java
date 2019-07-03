@@ -1,7 +1,12 @@
 package com.stock.stockday.controller;
 
 import com.stock.apicommon.model.ResultData;
+import com.stock.stockday.newService.find3.findService100;
 import com.stock.stockday.newService.find3.findService2;
+import com.stock.stockday.newService.find3.findService60;
+import com.stock.stockday.newService.find3.findService70;
+import com.stock.stockday.newService.find3.findService75;
+import com.stock.stockday.newService.find3.findService80;
 import com.stock.stockday.service.find.findService;
 import com.stock.stockday.service.find2.yanPanService;
 import com.stock.stockday.service.find2.yanPanService2;
@@ -34,6 +39,16 @@ public class FindController {
     private yanPanService4 yanPanService4;
     @Autowired
     private findService2 findService2;
+    @Autowired
+    private findService60 findService60;
+    @Autowired
+    private findService70 findService70;
+    @Autowired
+    private findService75 findService75;
+    @Autowired
+    private findService80 findService80;
+    @Autowired
+    private findService100 findService100;
 
 
     @GetMapping("/duoTuXiangShang")
@@ -77,16 +92,72 @@ public class FindController {
         List<StockDayVo> stockDayVoList=findService.jieQi2();
         return new ResultData(stockDayVoList);
     }
-    @GetMapping("/u3ShengVDapan4")
-    public ResultData<List<StockDayVo>> u3ShengVDapan4() throws IOException {
-        List<StockDayVo> stockDayVoList=findService2.U3ShengVDapan4();
+    @GetMapping("/dayYanPanFunction57")
+    public ResultData<List<StockDayVo>> dayYanPanFunction57() throws IOException {
+        List<StockDayVo> stockDayVoList=findService60.dayYanPanFunction57();
         return new ResultData(stockDayVoList);
     }
-    @GetMapping("/u3ShengVDapan2")
-    public ResultData<List<StockDayVo>> u3ShengVDapan2() throws IOException {
-        List<StockDayVo> stockDayVoList=findService2.U3shengVDapan2();
+    @GetMapping("/dayYanPanFunction60")
+    public ResultData<List<StockDayVo>> dayYanPanFunction60() throws IOException {
+        List<StockDayVo> stockDayVoList=findService60.dayYanPanFunction60();
         return new ResultData(stockDayVoList);
     }
+    @GetMapping("/dayYanPanFunction62")
+    public ResultData<List<StockDayVo>> dayYanPanFunction62() throws IOException {
+        List<StockDayVo> stockDayVoList=findService2.dayYanPanFunction62();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction65")
+    public ResultData<List<StockDayVo>> dayYanPanFunction65() throws IOException {
+        List<StockDayVo> stockDayVoList=findService2.dayYanPanFunction65();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction67")
+    public ResultData<List<StockDayVo>> dayYanPanFunction67() throws IOException {
+        List<StockDayVo> stockDayVoList=findService70.dayYanPanFunction67();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction70")
+    public ResultData<List<StockDayVo>> dayYanPanFunction70() throws IOException {
+        List<StockDayVo> stockDayVoList=findService70.dayYanPanFunction70();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction72")
+    public ResultData<List<StockDayVo>> dayYanPanFunction72() throws IOException {
+        List<StockDayVo> stockDayVoList=findService75.dayYanPanFunction72();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction75")
+    public ResultData<List<StockDayVo>> dayYanPanFunction75() throws IOException {
+        List<StockDayVo> stockDayVoList=findService75.dayYanPanFunction75();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction77")
+    public ResultData<List<StockDayVo>> dayYanPanFunction77() throws IOException {
+        List<StockDayVo> stockDayVoList=findService80.dayYanPanFunction77();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction80")
+    public ResultData<List<StockDayVo>> dayYanPanFunction80() throws IOException {
+        List<StockDayVo> stockDayVoList=findService80.dayYanPanFunction80();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction85")
+    public ResultData<List<StockDayVo>> dayYanPanFunction85() throws IOException {
+        List<StockDayVo> stockDayVoList=findService100.dayYanPanFunction85();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction90")
+    public ResultData<List<StockDayVo>> dayYanPanFunction90() throws IOException {
+        List<StockDayVo> stockDayVoList=findService100.dayYanPanFunction90();
+        return new ResultData(stockDayVoList);
+    }
+    @GetMapping("/dayYanPanFunction100")
+    public ResultData<List<StockDayVo>> dayYanPanFunction100() throws IOException {
+        List<StockDayVo> stockDayVoList=findService100.dayYanPanFunction100();
+        return new ResultData(stockDayVoList);
+    }
+
 
     @GetMapping("/getYanPan")
     public ResultData getYanPan() throws IOException {
@@ -109,10 +180,6 @@ public class FindController {
         yanPanService4.getYanPan();
         return new ResultData();
     }
-
-
-
-
 
 
 }

@@ -114,7 +114,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class yanPanServiceImpl implements yanPanService{
+public class yanPanServiceImpl implements yanPanService {
     @Autowired
     private StockCodeService stockCodeService;
     @Autowired
@@ -313,8 +313,6 @@ public class yanPanServiceImpl implements yanPanService{
     private StockDayScience399Service stockDayScience399Service;
 
 
-
-
     @Override
     public String getYanPan() throws IOException {
         //获取所以编码
@@ -337,14 +335,14 @@ public class yanPanServiceImpl implements yanPanService{
         List<StockDayScience399> stockDayScience399006List = stockDayScience399Service.selectByCodeAndEx("399001", "SZ");
         //遍历
         for (StockCode stockCode : stockCodeList) {
-            List<StockDayAll> stockDayAllList0001=new ArrayList<>();
-            List<StockDayAll> stockDayAllList399001=new ArrayList<>();
-            List<StockDayAll> stockDayAllList399005=new ArrayList<>();
-            List<StockDayAll> stockDayAllList399006=new ArrayList<>();
-            List<StockDayScience> stockDayScienceList0001=new ArrayList<>();
-            List<StockDayScience> stockDayScienceList399001=new ArrayList<>();
-            List<StockDayScience> stockDayScienceList399005=new ArrayList<>();
-            List<StockDayScience> stockDayScienceList399006=new ArrayList<>();
+            List<StockDayAll> stockDayAllList0001 = new ArrayList<>();
+            List<StockDayAll> stockDayAllList399001 = new ArrayList<>();
+            List<StockDayAll> stockDayAllList399005 = new ArrayList<>();
+            List<StockDayAll> stockDayAllList399006 = new ArrayList<>();
+            List<StockDayScience> stockDayScienceList0001 = new ArrayList<>();
+            List<StockDayScience> stockDayScienceList399001 = new ArrayList<>();
+            List<StockDayScience> stockDayScienceList399005 = new ArrayList<>();
+            List<StockDayScience> stockDayScienceList399006 = new ArrayList<>();
             switch (stockCode.getId().substring(0, 4)) {
                 case "0000":
                     if (stockCode.getId().equals("000001") && stockCode.getEx().equals("SH")) {
@@ -513,112 +511,121 @@ public class yanPanServiceImpl implements yanPanService{
                     yanPanDayService.dayYanPanFunction(stockDayAllList5,stockDayScienceList5,stockDayAllList399001,stockDayScienceList399001);
                     continue;
                 case "0006":
-                    List<StockDay0006> stockDay0006List = stockDay0006Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
-                    List<StockDayScience0006> stockDayScience0006List = stockDayScience0006Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//技术先
-                    List<StockDayAll> stockDayAllList6=new ArrayList<>();
-                    List<StockDayScience> stockDayScienceList6=new ArrayList<>();
-                    for (StockDay0006 stockDay0006:stockDay0006List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay0006,stockDayAll);
-                        stockDayAllList6.add(stockDayAll);
-                    }
-                    for (StockDayScience0006 stockDayScience0006:stockDayScience0006List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience0006,stockDayScience);
-                        stockDayScienceList6.add(stockDayScience);
-                    }
-                    for (StockDay399 stockDay399:stockDay399001List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay399,stockDayAll);
-                        stockDayAllList399001.add(stockDayAll);
-                    }
-                    for (StockDayScience399 stockDayScience399:stockDayScience399001List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience399,stockDayScience);
-                        stockDayScienceList399001.add(stockDayScience);
-                    }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList6,stockDayScienceList6,stockDayAllList399001,stockDayScienceList399001);
+                        List<StockDay0006> stockDay0006List = stockDay0006Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
+                        List<StockDayScience0006> stockDayScience0006List = stockDayScience0006Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//技术先
+                        List<StockDayAll> stockDayAllList6 = new ArrayList<>();
+                        List<StockDayScience> stockDayScienceList6 = new ArrayList<>();
+                        for (StockDay0006 stockDay0006 : stockDay0006List) {
+                            StockDayAll stockDayAll = new StockDayAll();
+                            BeanUtils.copyProperties(stockDay0006, stockDayAll);
+                            stockDayAllList6.add(stockDayAll);
+                        }
+                        for (StockDayScience0006 stockDayScience0006 : stockDayScience0006List) {
+                            StockDayScience stockDayScience = new StockDayScience();
+                            BeanUtils.copyProperties(stockDayScience0006, stockDayScience);
+                            stockDayScienceList6.add(stockDayScience);
+                        }
+                        for (StockDay399 stockDay399 : stockDay399001List) {
+                            StockDayAll stockDayAll = new StockDayAll();
+                            BeanUtils.copyProperties(stockDay399, stockDayAll);
+                            stockDayAllList399001.add(stockDayAll);
+                        }
+                        for (StockDayScience399 stockDayScience399 : stockDayScience399001List) {
+                            StockDayScience stockDayScience = new StockDayScience();
+                            BeanUtils.copyProperties(stockDayScience399, stockDayScience);
+                            stockDayScienceList399001.add(stockDayScience);
+                        }
+                        yanPanDayService.dayYanPanFunction(stockDayAllList6, stockDayScienceList6, stockDayAllList399001, stockDayScienceList399001);
                     continue;
                 case "0007":
                     List<StockDay0007> stockDay0007List = stockDay0007Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
                     List<StockDayScience0007> stockDayScience0007List = stockDayScience0007Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//技术先
-                    List<StockDayAll> stockDayAllList7=new ArrayList<>();
-                    List<StockDayScience> stockDayScienceList7=new ArrayList<>();
-                    for (StockDay0007 stockDay0007:stockDay0007List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay0007,stockDayAll);
+                    List<StockDayAll> stockDayAllList7 = new ArrayList<>();
+                    List<StockDayScience> stockDayScienceList7 = new ArrayList<>();
+                    for (StockDay0007 stockDay0007 : stockDay0007List) {
+                        StockDayAll stockDayAll = new StockDayAll();
+                        BeanUtils.copyProperties(stockDay0007, stockDayAll);
                         stockDayAllList7.add(stockDayAll);
                     }
-                    for (StockDayScience0007 stockDayScience0007:stockDayScience0007List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience0007,stockDayScience);
+                    for (StockDayScience0007 stockDayScience0007 : stockDayScience0007List) {
+                        StockDayScience stockDayScience = new StockDayScience();
+                        BeanUtils.copyProperties(stockDayScience0007, stockDayScience);
                         stockDayScienceList7.add(stockDayScience);
                     }
-                    for (StockDay399 stockDay399:stockDay399001List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay399,stockDayAll);
+                    for (StockDay399 stockDay399 : stockDay399001List) {
+                        StockDayAll stockDayAll = new StockDayAll();
+                        BeanUtils.copyProperties(stockDay399, stockDayAll);
                         stockDayAllList399001.add(stockDayAll);
                     }
-                    for (StockDayScience399 stockDayScience399:stockDayScience399001List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience399,stockDayScience);
+                    for (StockDayScience399 stockDayScience399 : stockDayScience399001List) {
+                        StockDayScience stockDayScience = new StockDayScience();
+                        BeanUtils.copyProperties(stockDayScience399, stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList7,stockDayScienceList7,stockDayAllList399001,stockDayScienceList399001);
+                    yanPanDayService.dayYanPanFunction(stockDayAllList7, stockDayScienceList7, stockDayAllList399001, stockDayScienceList399001);
                     continue;
                 case "0008":
                     List<StockDay0008> stockDay0008List = stockDay0008Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
                     List<StockDayScience0008> stockDayScience0008List = stockDayScience0008Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//技术先
-                    List<StockDayAll> stockDayAllList8=new ArrayList<>();
-                    List<StockDayScience> stockDayScienceList8=new ArrayList<>();
-                    for (StockDay0008 stockDay0008:stockDay0008List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay0008,stockDayAll);
+                    List<StockDayAll> stockDayAllList8 = new ArrayList<>();
+                    List<StockDayScience> stockDayScienceList8 = new ArrayList<>();
+                    for (StockDay0008 stockDay0008 : stockDay0008List) {
+                        StockDayAll stockDayAll = new StockDayAll();
+                        BeanUtils.copyProperties(stockDay0008, stockDayAll);
                         stockDayAllList8.add(stockDayAll);
                     }
-                    for (StockDayScience0008 stockDayScience0008:stockDayScience0008List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience0008,stockDayScience);
+                    for (StockDayScience0008 stockDayScience0008 : stockDayScience0008List) {
+                        StockDayScience stockDayScience = new StockDayScience();
+                        BeanUtils.copyProperties(stockDayScience0008, stockDayScience);
                         stockDayScienceList8.add(stockDayScience);
                     }
-                    for (StockDay399 stockDay399:stockDay399001List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay399,stockDayAll);
+                    for (StockDay399 stockDay399 : stockDay399001List) {
+                        StockDayAll stockDayAll = new StockDayAll();
+                        BeanUtils.copyProperties(stockDay399, stockDayAll);
                         stockDayAllList399001.add(stockDayAll);
                     }
-                    for (StockDayScience399 stockDayScience399:stockDayScience399001List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience399,stockDayScience);
+                    for (StockDayScience399 stockDayScience399 : stockDayScience399001List) {
+                        StockDayScience stockDayScience = new StockDayScience();
+                        BeanUtils.copyProperties(stockDayScience399, stockDayScience);
                         stockDayScienceList399001.add(stockDayScience);
                     }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList8,stockDayScienceList8,stockDayAllList399001,stockDayScienceList399001);
+                    yanPanDayService.dayYanPanFunction(stockDayAllList8, stockDayScienceList8, stockDayAllList399001, stockDayScienceList399001);
                     continue;
                 case "0009":
-                    List<StockDay0009> stockDay0009List = stockDay0009Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
-                    List<StockDayScience0009> stockDayScience0009List = stockDayScience0009Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//技术先
-                    List<StockDayAll> stockDayAllList9=new ArrayList<>();
-                    List<StockDayScience> stockDayScienceList9=new ArrayList<>();
-                    for (StockDay0009 stockDay0009:stockDay0009List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay0009,stockDayAll);
-                        stockDayAllList9.add(stockDayAll);
+                    if (stockCode.getId().equals("000900")||stockCode.getId().equals("000901")||stockCode.getId().equals("000902")||stockCode.getId().equals("000903")||stockCode.getId().equals("000904")||stockCode.getId().equals("000905")
+                            ||stockCode.getId().equals("000906")||stockCode.getId().equals("000907")||stockCode.getId().equals("000908")||stockCode.getId().equals("000909")||stockCode.getId().equals("000910")||stockCode.getId().equals("000911")
+                            ||stockCode.getId().equals("000912")||stockCode.getId().equals("000913")||stockCode.getId().equals("000914")||stockCode.getId().equals("000915")||stockCode.getId().equals("000916")||stockCode.getId().equals("000917")
+                            ||stockCode.getId().equals("000918")||stockCode.getId().equals("000919")||stockCode.getId().equals("000920")||stockCode.getId().equals("000921")||stockCode.getId().equals("000922")||stockCode.getId().equals("000923")
+                            ||stockCode.getId().equals("000924")||stockCode.getId().equals("000925")||stockCode.getId().equals("000926")||stockCode.getId().equals("000927")||stockCode.getId().equals("000928")||stockCode.getId().equals("000929")
+                            ||stockCode.getId().equals("000930")||stockCode.getId().equals("000931")||stockCode.getId().equals("000932")||stockCode.getId().equals("000933")) {
+                        continue;
+                    } else {
+                        List<StockDay0009> stockDay0009List = stockDay0009Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
+                        List<StockDayScience0009> stockDayScience0009List = stockDayScience0009Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//技术先
+                        List<StockDayAll> stockDayAllList9 = new ArrayList<>();
+                        List<StockDayScience> stockDayScienceList9 = new ArrayList<>();
+                        for (StockDay0009 stockDay0009 : stockDay0009List) {
+                            StockDayAll stockDayAll = new StockDayAll();
+                            BeanUtils.copyProperties(stockDay0009, stockDayAll);
+                            stockDayAllList9.add(stockDayAll);
+                        }
+                        for (StockDayScience0009 stockDayScience0009 : stockDayScience0009List) {
+                            StockDayScience stockDayScience = new StockDayScience();
+                            BeanUtils.copyProperties(stockDayScience0009, stockDayScience);
+                            stockDayScienceList9.add(stockDayScience);
+                        }
+                        for (StockDay399 stockDay399 : stockDay399001List) {
+                            StockDayAll stockDayAll = new StockDayAll();
+                            BeanUtils.copyProperties(stockDay399, stockDayAll);
+                            stockDayAllList399001.add(stockDayAll);
+                        }
+                        for (StockDayScience399 stockDayScience399 : stockDayScience399001List) {
+                            StockDayScience stockDayScience = new StockDayScience();
+                            BeanUtils.copyProperties(stockDayScience399, stockDayScience);
+                            stockDayScienceList399001.add(stockDayScience);
+                        }
+                        yanPanDayService.dayYanPanFunction(stockDayAllList9, stockDayScienceList9, stockDayAllList399001, stockDayScienceList399001);
                     }
-                    for (StockDayScience0009 stockDayScience0009:stockDayScience0009List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience0009,stockDayScience);
-                        stockDayScienceList9.add(stockDayScience);
-                    }
-                    for (StockDay399 stockDay399:stockDay399001List){
-                        StockDayAll stockDayAll=new StockDayAll();
-                        BeanUtils.copyProperties(stockDay399,stockDayAll);
-                        stockDayAllList399001.add(stockDayAll);
-                    }
-                    for (StockDayScience399 stockDayScience399:stockDayScience399001List){
-                        StockDayScience stockDayScience=new StockDayScience();
-                        BeanUtils.copyProperties(stockDayScience399,stockDayScience);
-                        stockDayScienceList399001.add(stockDayScience);
-                    }
-                    yanPanDayService.dayYanPanFunction(stockDayAllList9,stockDayScienceList9,stockDayAllList399001,stockDayScienceList399001);
                     continue;
                 case "0020":
                     List<StockDay0020> stockDay0020List = stockDay0020Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
@@ -1570,29 +1577,29 @@ public class yanPanServiceImpl implements yanPanService{
                         case "001":
                             List<StockDay001> stockDay001List = stockDay001Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
                             List<StockDayScience001> stockDayScience001List = stockDayScience001Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//技术先
-                            List<StockDayAll> stockDayAllList001=new ArrayList<>();
-                            List<StockDayScience> stockDayScienceList001=new ArrayList<>();
-                            for (StockDay001 stockDay001:stockDay001List){
-                                StockDayAll stockDayAll=new StockDayAll();
-                                BeanUtils.copyProperties(stockDay001,stockDayAll);
+                            List<StockDayAll> stockDayAllList001 = new ArrayList<>();
+                            List<StockDayScience> stockDayScienceList001 = new ArrayList<>();
+                            for (StockDay001 stockDay001 : stockDay001List) {
+                                StockDayAll stockDayAll = new StockDayAll();
+                                BeanUtils.copyProperties(stockDay001, stockDayAll);
                                 stockDayAllList001.add(stockDayAll);
                             }
-                            for (StockDayScience001 stockDayScience001:stockDayScience001List){
-                                StockDayScience stockDayScience=new StockDayScience();
-                                BeanUtils.copyProperties(stockDayScience001,stockDayScience);
+                            for (StockDayScience001 stockDayScience001 : stockDayScience001List) {
+                                StockDayScience stockDayScience = new StockDayScience();
+                                BeanUtils.copyProperties(stockDayScience001, stockDayScience);
                                 stockDayScienceList001.add(stockDayScience);
                             }
-                            for (StockDay399 stockDay399:stockDay399001List){
-                                StockDayAll stockDayAll=new StockDayAll();
-                                BeanUtils.copyProperties(stockDay399,stockDayAll);
+                            for (StockDay399 stockDay399 : stockDay399001List) {
+                                StockDayAll stockDayAll = new StockDayAll();
+                                BeanUtils.copyProperties(stockDay399, stockDayAll);
                                 stockDayAllList399001.add(stockDayAll);
                             }
-                            for (StockDayScience399 stockDayScience399:stockDayScience399001List){
-                                StockDayScience stockDayScience=new StockDayScience();
-                                BeanUtils.copyProperties(stockDayScience399,stockDayScience);
+                            for (StockDayScience399 stockDayScience399 : stockDayScience399001List) {
+                                StockDayScience stockDayScience = new StockDayScience();
+                                BeanUtils.copyProperties(stockDayScience399, stockDayScience);
                                 stockDayScienceList399001.add(stockDayScience);
                             }
-                            yanPanDayService.dayYanPanFunction(stockDayAllList001,stockDayScienceList001,stockDayAllList399001,stockDayScienceList399001);
+                            yanPanDayService.dayYanPanFunction(stockDayAllList001, stockDayScienceList001, stockDayAllList399001, stockDayScienceList399001);
                             continue;
                         case "603":
                             List<StockDay603> stockDay603List = stockDay603Service.selectByCodeAndEx(stockCode.getId(), stockCode.getEx());//日线
