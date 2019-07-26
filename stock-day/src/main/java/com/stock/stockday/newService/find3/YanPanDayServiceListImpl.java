@@ -68,6 +68,14 @@ import com.stock.stockday.util.FindUtil90;
 import com.stock.stockday.util.FindUtil91;
 import com.stock.stockday.util.FindUtil92;
 import com.stock.stockday.util.FindUtil93;
+import com.stock.stockday.util.FindUtil94;
+import com.stock.stockday.util.FindUtil96;
+import com.stock.stockday.util.FindUtil97;
+import com.stock.stockday.utils.FindUtil100;
+import com.stock.stockday.utils.FindUtil101;
+import com.stock.stockday.utils.FindUtil102;
+import com.stock.stockday.utils.FindUtil105;
+import com.stock.stockday.utils.FindUtil98;
 import com.stock.stockday.vo.StockDayVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -689,11 +697,12 @@ public class YanPanDayServiceListImpl {
                 boolean flag106= FindUtil29.jishujieqiDapan4(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
                 boolean flag107= FindUtil10.jieQiDapan6(stockDayAllList1,scienceEntityList,stockDayAllListDaPan1,scienceEntityListDaPan);
                 boolean flag108= FindUtil22.jishujieqiDapan9(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+                boolean flag109= FindUtil94.shengVDapan2(stockDayAllListDaPan1,scienceEntityListDaPan);
 
 
                 if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22||flag23||flag24||flag25||flag26||flag27||flag28||flag29||flag30||flag31||flag32||flag33||flag34||flag35||flag36||flag37||flag38||flag39||flag40||flag41||flag42||flag43||
                 flag44||flag45||flag46||flag47||flag48||flag49||flag50||flag51||flag52||flag53||flag54||flag55||flag56||flag57||flag58||flag59||flag60||flag61||flag62||flag63||flag64||flag65||flag66||flag67||flag68||flag69||flag70||flag71||flag72||flag73||flag74||flag75||flag76||flag77||flag78||flag79||flag80||flag81||flag82
-                        ||flag83||flag84||flag85||flag86||flag87||flag88||flag89||flag90||flag91||flag92||flag93||flag94||flag95||flag96||flag97||flag98||flag99||flag100||flag101||flag102||flag103||flag104||flag105||flag106||flag107||flag108){
+                        ||flag83||flag84||flag85||flag86||flag87||flag88||flag89||flag90||flag91||flag92||flag93||flag94||flag95||flag96||flag97||flag98||flag99||flag100||flag101||flag102||flag103||flag104||flag105||flag106||flag107||flag108||flag109){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -959,9 +968,23 @@ public class YanPanDayServiceListImpl {
                 boolean flag54= FindUtil73.jishujieqiDapan6(stockDayAllList1, scienceEntityList, scienceEntityListDaPan);
                 boolean flag55= FindUtil91.shengVDapan2(stockDayAllListDaPan1,scienceEntityListDaPan);
                 boolean flag56= FindUtil91.shengVDapan3(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag57= FindUtil98.jieQiDapan5(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag58= FindUtil101.jieQiDapan44(stockDayAllList1, scienceEntityList);
+                boolean flag59= FindUtil102.jishujieqiDapan6(stockDayAllListDaPan1, scienceEntityListDaPan);
+                boolean flag60= FindUtil102.duoTuXiangShangDapan4(stockDayAllListDaPan1, scienceEntityListDaPan);
+                boolean flag61= FindUtil102.jishujieqiDapan9(stockDayAllListDaPan1, scienceEntityListDaPan);
+                boolean flag62= FindUtil102.jieQiDapan10(stockDayAllListDaPan1, scienceEntityListDaPan);
+                boolean flag63= FindUtil102.jieQiDapan15(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag64= FindUtil102.jieQiDapan30(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag65= FindUtil102.jieQiDapan45(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag66= FindUtil105.duoTuXiangShangDapan4(stockDayAllList1,scienceEntityList);
+                boolean flag67= FindUtil105.shengVDapan4(stockDayAllList1,scienceEntityList);
+                boolean flag68= FindUtil105.jieQiDapan15(stockDayAllList1,scienceEntityList);
+                boolean flag69= FindUtil105.jieQiDapan30(stockDayAllList1,scienceEntityList);
+                boolean flag70= FindUtil105.jieQiDapan45(stockDayAllList1,scienceEntityList);
 
                 if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22||flag23||flag24||flag25||flag26||flag27||flag28||flag29||flag30||flag31||flag32||flag33||flag34||flag35||flag36||flag37||flag38||flag39||flag40||flag41||flag42||flag43||
-                flag44||flag45||flag46||flag47||flag48||flag49||flag50||flag51||flag52||flag53||flag54||flag55||flag56){
+                flag44||flag45||flag46||flag47||flag48||flag49||flag50||flag51||flag52||flag53||flag54||flag55||flag56||flag57||flag58||flag59||flag60||flag61||flag62||flag63||flag64||flag65||flag66||flag67||flag68||flag69||flag70){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -1222,9 +1245,20 @@ public class YanPanDayServiceListImpl {
                 boolean flag49= FindUtil51.jieQiDapan19(scienceEntityList, scienceEntityListDaPan);
                 boolean flag50= FindUtil39.jishujieqiDapan7(stockDayAllList1, scienceEntityList);
                 boolean flag51= FindUtil90.shengVDapan3(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag52= FindUtil94.shengVDapan3(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag53= FindUtil97.jishujieqiDapan6(stockDayAllList1,scienceEntityList);
+                boolean flag54= FindUtil102.jieQiDapan33(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag55= FindUtil102.jieQiDapan34(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag56= FindUtil102.jishujieqiDapan6(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag57= FindUtil102.jieQiDapan15(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag58= FindUtil102.jieQiDapan30(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag59= FindUtil102.jieQiDapan45(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag60= FindUtil105.jieQiDapan33(stockDayAllList1,scienceEntityList);
+                boolean flag61= FindUtil105.jieQiDapan34(stockDayAllList1,scienceEntityList);
 
                 if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22||flag23||flag24||flag25||flag26
-                        ||flag27||flag28||flag29||flag30||flag31||flag32||flag33||flag34||flag35||flag36||flag37||flag38||flag39||flag40||flag41||flag42||flag43||flag44||flag45||flag46||flag47||flag48||flag49||flag50||flag51){
+                        ||flag27||flag28||flag29||flag30||flag31||flag32||flag33||flag34||flag35||flag36||flag37||flag38||flag39||flag40||flag41||flag42||flag43||flag44||flag45||flag46||flag47||flag48||flag49||flag50||flag51||
+                flag52||flag53||flag54||flag55||flag56||flag57||flag58||flag59||flag60||flag61){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -1471,8 +1505,17 @@ public class YanPanDayServiceListImpl {
                 boolean flag34= FindUtil73.jieQiDapan18(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
                 boolean flag35= FindUtil66.jishujieqiDapan5(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
                 boolean flag36= FindUtil90.shengVDapan2(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag37= FindUtil102.duoTuXiangShangDapan2(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag38= FindUtil102.shengVDapan4(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag39= FindUtil102.reset20Dapan4(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag40= FindUtil102.jieQiDapan19(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag41= FindUtil105.duoTuXiangShangDapan2(stockDayAllList1,scienceEntityList);
+                boolean flag42= FindUtil105.shengVDapan4(stockDayAllList1,scienceEntityList);
+                boolean flag43= FindUtil105.reset20Dapan4(stockDayAllList1,scienceEntityList);
+                boolean flag44= FindUtil105.jieQiDapan19(stockDayAllList1,scienceEntityList);
 
-                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22||flag23||flag24||flag25||flag26||flag27||flag28||flag29||flag30||flag31||flag32||flag33||flag34||flag35||flag36){
+                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22||flag23||flag24||flag25||flag26||flag27||flag28||flag29||flag30||flag31||flag32||flag33||flag34||flag35||flag36||flag37
+                ||flag38||flag39||flag40||flag41||flag42||flag43||flag44){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -1731,12 +1774,12 @@ public class YanPanDayServiceListImpl {
                 boolean flag47= FindUtil92.jishujieqiDapan5(stockDayAllList1,scienceEntityList);
                 boolean flag48= FindUtil90.jishujieqiDapan5(stockDayAllListDaPan1,scienceEntityListDaPan);
                 boolean flag49= FindUtil93.jishujieqiDapan5(stockDayAllList1,scienceEntityListDaPan);
-
+                boolean flag50= FindUtil98.duoTuXiangShangDapan3(stockDayAllListDaPan1,scienceEntityListDaPan);
 
 
                 if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||
                 flag21||flag22||flag23||flag24||flag25||flag26||flag27||flag28||flag29||flag30||flag31||flag32||flag33||flag34||flag35||flag36||flag37||flag38||flag39||flag40||flag41||flag42||flag43||flag44||flag45||flag46||flag47
-                ||flag48||flag49){
+                ||flag48||flag49||flag50){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -1969,8 +2012,11 @@ public class YanPanDayServiceListImpl {
                 boolean flag21= FindUtil88.jishujieqiDapan7(scienceEntityList,scienceEntityListDaPan);
                 boolean flag22= FindUtil87.shengVDapan2(scienceEntityList,scienceEntityListDaPan);
                 boolean flag23= FindUtil91.jishujieqiDapan5(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag24= FindUtil94.jieQiDapan5(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag25= FindUtil96.jieQiDapan14(stockDayAllList1, scienceEntityList, scienceEntityListDaPan);
+                boolean flag26= FindUtil105.jieQiDapan18(stockDayAllList1,scienceEntityList);
 
-                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22||flag23){
+                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22||flag23||flag24||flag25||flag26){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -2198,8 +2244,12 @@ public class YanPanDayServiceListImpl {
                 boolean flag16= FindUtil10.jieQiDapan5(stockDayAllList1,scienceEntityList,stockDayAllListDaPan1,scienceEntityListDaPan);
                 boolean flag17= FindUtil57.jieQiDapan17( scienceEntityList,  scienceEntityListDaPan);
                 boolean flag18= FindUtil10.jieQiDapan11(stockDayAllList1,stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag19= FindUtil96.jishujieqiDapan5(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+                boolean flag20= FindUtil102.jieQiDapan18(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag21= FindUtil102.jieQiDapan37(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag22= FindUtil105.jieQiDapan37(stockDayAllList1,scienceEntityList);
 
-                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18){
+                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15||flag16||flag17||flag18||flag19||flag20||flag21||flag22){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -2637,7 +2687,17 @@ public class YanPanDayServiceListImpl {
                 boolean flag4= FindUtil14.reset20Dapan2(stockDayAllList1,scienceEntityList,stockDayAllListDaPan1,scienceEntityListDaPan);
                 boolean flag5= FindUtil14.reset20Dapan3(stockDayAllList1,scienceEntityList,stockDayAllListDaPan1,scienceEntityListDaPan);
                 boolean flag6= FindUtil14.jishujieqiDapan5(stockDayAllList1,scienceEntityList,stockDayAllListDaPan1,scienceEntityListDaPan);
-                if (flag||flag1||flag2||flag3||flag4||flag5||flag6){
+                boolean flag7= FindUtil96.jieQiDapan29(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+                boolean flag8= FindUtil100.jishujieqiDapan5(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+                boolean flag9= FindUtil100.jieQiDapan14(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+                boolean flag10= FindUtil100.jieQiDapan29(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+                boolean flag11= FindUtil100.jieQiDapan44(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+                boolean flag12= FindUtil102.jieQiDapan3(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag13= FindUtil102.jieQiDapan22(stockDayAllListDaPan1,scienceEntityListDaPan);
+                boolean flag14= FindUtil105.jieQiDapan3(stockDayAllList1,scienceEntityList);
+                boolean flag15= FindUtil105.jieQiDapan22(stockDayAllList1,scienceEntityList);
+
+                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14||flag15){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -2860,7 +2920,9 @@ public class YanPanDayServiceListImpl {
                 boolean flag11= FindUtil69.jieQiDapan17(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
                 boolean flag12= FindUtil66.shengVDapan2(stockDayAllList1, scienceEntityList, scienceEntityListDaPan);
                 boolean flag13= FindUtil87.reset20Dapan2(scienceEntityList,scienceEntityListDaPan);
-                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13){
+                boolean flag14= FindUtil96.jieQiDapan44(stockDayAllList1,scienceEntityList,scienceEntityListDaPan);
+
+                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9||flag10||flag11||flag12||flag13||flag14){
                     stockDayVoList.add(stockDayVo);
                 }
                 return stockDayVoList;
@@ -3298,7 +3360,8 @@ public class YanPanDayServiceListImpl {
                 boolean flag6= FindUtil51.jieQiDapan4(scienceEntityList,scienceEntityListDaPan);
                 boolean flag7= FindUtil51.jishujieqiDapan4(scienceEntityList,scienceEntityListDaPan);
                 boolean flag8= FindUtil51.jieQiDapan10(scienceEntityList,scienceEntityListDaPan);
-                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8){
+                boolean flag9= FindUtil98.jieQiDapan27(stockDayAllListDaPan1,scienceEntityListDaPan);
+                if (flag||flag1||flag2||flag3||flag4||flag5||flag6||flag7||flag8||flag9){
                     stockDayVoList.add(stockDayVo);
                 }
 

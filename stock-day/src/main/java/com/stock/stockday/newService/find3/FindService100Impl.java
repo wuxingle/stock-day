@@ -119,6 +119,8 @@ public class FindService100Impl implements findService100 {
     @Autowired
     private YanPanDayServiceListImpl yanPanDayService;
     @Autowired
+    private DaPanDayServiceListImpl daPanDayServiceList;
+    @Autowired
     private StockDay399Service stockDay399Service;
     @Autowired
     private StockDayScience399Service stockDayScience399Service;
@@ -4556,6 +4558,90 @@ public class FindService100Impl implements findService100 {
                     }
             }
         }
+        return stockDayVoList;
+    }
+
+    @Override
+    public List<StockDayVo> dayDaPanFunction() throws IOException {
+        List<StockDayVo> stockDayVoList=new ArrayList<>();
+        Page<StockDay0000> page = new Page<>(1, 60);
+        //获取上证
+        List<StockDay0000> stockDay000001List = stockDay0000Service.selectByCodeAndExPage(page,"000001", "SH");
+        Page<StockDay399> page2 = new Page<>(1, 60);
+        //获取sz
+        List<StockDay399> stockDay399001List = stockDay399Service.selectByCodeAndExPage(page2,"399001", "SZ");
+        Page<StockDay399> page3 = new Page<>(1, 60);
+        //获取中小
+        List<StockDay399> stockDay399005List = stockDay399Service.selectByCodeAndExPage(page3,"399005", "SZ");
+        Page<StockDay399> page4 = new Page<>(1, 60);
+        //获取创业
+        List<StockDay399> stockDay399006List = stockDay399Service.selectByCodeAndExPage(page4,"399006", "SZ");
+
+        Page<StockDayScience0000> page5=new Page<>(1,60);
+        List<StockDayScience0000> stockDayScience000001List = stockDayScience0000Service.selectByPage(page5,"000001", "SH");
+        Page<StockDayScience399> page6=new Page<>(1,60);
+        List<StockDayScience399> stockDayScience399001List = stockDayScience399Service.selectByPage(page6,"399001", "SZ");
+        Page<StockDayScience399> page7=new Page<>(1,60);
+        List<StockDayScience399> stockDayScience399005List = stockDayScience399Service.selectByPage(page7,"399001", "SZ");
+        Page<StockDayScience399> page8=new Page<>(1,60);
+        List<StockDayScience399> stockDayScience399006List = stockDayScience399Service.selectByPage(page8,"399001", "SZ");
+        //遍历
+        List<StockDayAll> stockDayAllList0001 = new ArrayList<>();
+        List<StockDayAll> stockDayAllList399001 = new ArrayList<>();
+        List<StockDayAll> stockDayAllList399005 = new ArrayList<>();
+        List<StockDayAll> stockDayAllList399006 = new ArrayList<>();
+        List<StockDayScience> stockDayScienceList0001 = new ArrayList<>();
+        List<StockDayScience> stockDayScienceList399001 = new ArrayList<>();
+        List<StockDayScience> stockDayScienceList399005 = new ArrayList<>();
+        List<StockDayScience> stockDayScienceList399006 = new ArrayList<>();
+        for (StockDay0000 stockDay0000 : stockDay000001List) {
+            StockDayAll stockDayAll = new StockDayAll();
+            BeanUtils.copyProperties(stockDay0000, stockDayAll);
+            stockDayAllList0001.add(stockDayAll);
+        }
+        for (StockDayScience0000 stockDayScience0000 : stockDayScience000001List) {
+            StockDayScience stockDayScience = new StockDayScience();
+            BeanUtils.copyProperties(stockDayScience0000, stockDayScience);
+            stockDayScienceList0001.add(stockDayScience);
+        }
+        daPanDayServiceList.dayDaPanFunction(stockDayAllList0001, stockDayScienceList0001,stockDayVoList);
+
+        for (StockDay399 stockDay399001 : stockDay399001List) {
+            StockDayAll stockDayAll = new StockDayAll();
+            BeanUtils.copyProperties(stockDay399001, stockDayAll);
+            stockDayAllList399001.add(stockDayAll);
+        }
+        for (StockDayScience399 stockDayScience399 : stockDayScience399001List) {
+            StockDayScience stockDayScience = new StockDayScience();
+            BeanUtils.copyProperties(stockDayScience399, stockDayScience);
+            stockDayScienceList399001.add(stockDayScience);
+        }
+        daPanDayServiceList.dayDaPanFunction(stockDayAllList399001, stockDayScienceList399001,stockDayVoList);
+
+        for (StockDay399 stockDay399 : stockDay399005List) {
+            StockDayAll stockDayAll = new StockDayAll();
+            BeanUtils.copyProperties(stockDay399, stockDayAll);
+            stockDayAllList399005.add(stockDayAll);
+        }
+        for (StockDayScience399 stockDayScience399 : stockDayScience399005List) {
+            StockDayScience stockDayScience = new StockDayScience();
+            BeanUtils.copyProperties(stockDayScience399, stockDayScience);
+            stockDayScienceList399005.add(stockDayScience);
+        }
+        daPanDayServiceList.dayDaPanFunction(stockDayAllList399005, stockDayScienceList399005,stockDayVoList);
+
+        for (StockDay399 stockDay399 : stockDay399006List) {
+            StockDayAll stockDayAll = new StockDayAll();
+            BeanUtils.copyProperties(stockDay399, stockDayAll);
+            stockDayAllList399006.add(stockDayAll);
+        }
+        for (StockDayScience399 stockDayScience399 : stockDayScience399006List) {
+            StockDayScience stockDayScience = new StockDayScience();
+            BeanUtils.copyProperties(stockDayScience399, stockDayScience);
+            stockDayScienceList399006.add(stockDayScience);
+        }
+        daPanDayServiceList.dayDaPanFunction(stockDayAllList399006, stockDayScienceList399006,stockDayVoList);
+
         return stockDayVoList;
     }
 }

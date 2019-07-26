@@ -12,4 +12,6 @@ public interface findService100 {
 
     List<StockDayVo> dayYanPanFunction100() throws IOException;
 
+    List<StockDayVo> dayDaPanFunction() throws IOException;
+
 }

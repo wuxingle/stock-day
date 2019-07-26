@@ -46,7 +46,7 @@ import static com.stock.stockday.util.GetFileName.getFileNameDp;
 public class NewGetYuCeListUtil {
 
     public static List<StockDayVo> getYuCeKMPTDList(DaPanRateOfChangeVo daPanRateOfChangeVo, DangRiVo dangRiVo, RateOfChangeVo rateOfChangeVo, StockDayYanPan stockDayYanPan, StockDayVo stockDayVo, List<StockDayVo> stockDayVoList) throws IOException {
-        stockDayVoList=NewCommonSaveFile.newCommonKMPTDList(daPanRateOfChangeVo,dangRiVo,stockDayYanPan,stockDayVo,stockDayVoList);
+//        stockDayVoList=NewCommonSaveFile.newCommonKMPTDList(daPanRateOfChangeVo,dangRiVo,stockDayYanPan,stockDayVo,stockDayVoList);
         return stockDayVoList;
     }
 

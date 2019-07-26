@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: socket-center2
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-center
+      profile: dev
+      fail-fast: true
+server:
+  port: 8899
+eureka:
+  client:
+    service-url:
+      defaultZone: http://register-center:8781/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance-id:${random.int}}
+    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 5
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+logging:
+  level:
+    root: info
+  file: logs/${spring.application.name}.log
+cloudtalk:
+  api:
+    url: http://127.0.0.1:9900/api/sendmsg
+  bqmmplugin:
+    appid: 17edd35bcf9d483592bb41ac98293e23
+    appsecret: 2ed3fe6cfed44c04a64c6df1c94bf33e
+  files:
+    msfsprior: http://172.20.17.110:443/
+    msfspriorbackup: http://172.20.17.110:443/
+IMAPPID: 88888
+SERVER_IP: 127.0.0.1
+SERVER_PORT: 9326
+HttpMsgServerIp: 127.0.0.1
+HttpMsgServerPort: 9900

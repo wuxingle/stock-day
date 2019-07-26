@@ -6,7 +6,6 @@ import com.stock.stockday.entity.*;
 import com.stock.stockday.service.*;
 import com.stock.stockday.service.function.DayScience0000FunctionToday;
 import com.stock.stockday.service.function.*;
-import com.stock.stockday.service.jishuyupan.*;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -222,100 +221,100 @@ public class StockDayServiceImpl implements StockDayService {
     private DayScience399FunctionToday dayScience399FunctionToday;
     @Autowired
     private DayScience603FunctionToday dayScience603FunctionToday;
-    @Autowired
-    private DayYuPan0000Function dayYuPan0000Function;
-    @Autowired
-    private DayYuPan0001Function dayYuPan0001Function;
-    @Autowired
-    private DayYuPan0002Function dayYuPan0002Function;
-    @Autowired
-    private DayYuPan0003Function dayYuPan0003Function;
-    @Autowired
-    private DayYuPan0004Function dayYuPan0004Function;
-    @Autowired
-    private DayYuPan0005Function dayYuPan0005Function;
-    @Autowired
-    private DayYuPan0006Function dayYuPan0006Function;
-    @Autowired
-    private DayYuPan0007Function dayYuPan0007Function;
-    @Autowired
-    private DayYuPan0008Function dayYuPan0008Function;
-    @Autowired
-    private DayYuPan0009Function dayYuPan0009Function;
-    @Autowired
-    private DayYuPan0020Function dayYuPan0020Function;
-    @Autowired
-    private DayYuPan0021Function dayYuPan0021Function;
-    @Autowired
-    private DayYuPan0022Function dayYuPan0022Function;
-    @Autowired
-    private DayYuPan0023Function dayYuPan0023Function;
-    @Autowired
-    private DayYuPan0024Function dayYuPan0024Function;
-    @Autowired
-    private DayYuPan0025Function dayYuPan0025Function;
-    @Autowired
-    private DayYuPan0026Function dayYuPan0026Function;
-    @Autowired
-    private DayYuPan0027Function dayYuPan0027Function;
-    @Autowired
-    private DayYuPan0028Function dayYuPan0028Function;
-    @Autowired
-    private DayYuPan3000Function dayYuPan3000Function;
-    @Autowired
-    private DayYuPan3001Function dayYuPan3001Function;
-    @Autowired
-    private DayYuPan3002Function dayYuPan3002Function;
-    @Autowired
-    private DayYuPan3003Function dayYuPan3003Function;
-    @Autowired
-    private DayYuPan3004Function dayYuPan3004Function;
-    @Autowired
-    private DayYuPan3005Function dayYuPan3005Function;
-    @Autowired
-    private DayYuPan6000Function dayYuPan6000Function;
-    @Autowired
-    private DayYuPan6001Function dayYuPan6001Function;
-    @Autowired
-    private DayYuPan6002Function dayYuPan6002Function;
-    @Autowired
-    private DayYuPan6003Function dayYuPan6003Function;
-    @Autowired
-    private DayYuPan6004Function dayYuPan6004Function;
-    @Autowired
-    private DayYuPan6005Function dayYuPan6005Function;
-    @Autowired
-    private DayYuPan6006Function dayYuPan6006Function;
-    @Autowired
-    private DayYuPan6007Function dayYuPan6007Function;
-    @Autowired
-    private DayYuPan6008Function dayYuPan6008Function;
-    @Autowired
-    private DayYuPan6009Function dayYuPan6009Function;
-    @Autowired
-    private DayYuPan6010Function dayYuPan6010Function;
-    @Autowired
-    private DayYuPan6011Function dayYuPan6011Function;
-    @Autowired
-    private DayYuPan6012Function dayYuPan6012Function;
-    @Autowired
-    private DayYuPan6013Function dayYuPan6013Function;
-    @Autowired
-    private DayYuPan6014Function dayYuPan6014Function;
-    @Autowired
-    private DayYuPan6015Function dayYuPan6015Function;
-    @Autowired
-    private DayYuPan6016Function dayYuPan6016Function;
-    @Autowired
-    private DayYuPan6017Function dayYuPan6017Function;
-    @Autowired
-    private DayYuPan6018Function dayYuPan6018Function;
-    @Autowired
-    private DayYuPan6019Function dayYuPan6019Function;
-    @Autowired
-    private DayYuPan603Function dayYuPan603Function;
-    @Autowired
-    private DayYuPan001Function dayYuPan001Function;
+//    @Autowired
+//    private DayYuPan0000Function dayYuPan0000Function;
+//    @Autowired
+//    private DayYuPan0001Function dayYuPan0001Function;
+//    @Autowired
+//    private DayYuPan0002Function dayYuPan0002Function;
+//    @Autowired
+//    private DayYuPan0003Function dayYuPan0003Function;
+//    @Autowired
+//    private DayYuPan0004Function dayYuPan0004Function;
+//    @Autowired
+//    private DayYuPan0005Function dayYuPan0005Function;
+//    @Autowired
+//    private DayYuPan0006Function dayYuPan0006Function;
+//    @Autowired
+//    private DayYuPan0007Function dayYuPan0007Function;
+//    @Autowired
+//    private DayYuPan0008Function dayYuPan0008Function;
+//    @Autowired
+//    private DayYuPan0009Function dayYuPan0009Function;
+//    @Autowired
+//    private DayYuPan0020Function dayYuPan0020Function;
+//    @Autowired
+//    private DayYuPan0021Function dayYuPan0021Function;
+//    @Autowired
+//    private DayYuPan0022Function dayYuPan0022Function;
+//    @Autowired
+//    private DayYuPan0023Function dayYuPan0023Function;
+//    @Autowired
+//    private DayYuPan0024Function dayYuPan0024Function;
+//    @Autowired
+//    private DayYuPan0025Function dayYuPan0025Function;
+//    @Autowired
+//    private DayYuPan0026Function dayYuPan0026Function;
+//    @Autowired
+//    private DayYuPan0027Function dayYuPan0027Function;
+//    @Autowired
+//    private DayYuPan0028Function dayYuPan0028Function;
+//    @Autowired
+//    private DayYuPan3000Function dayYuPan3000Function;
+//    @Autowired
+//    private DayYuPan3001Function dayYuPan3001Function;
+//    @Autowired
+//    private DayYuPan3002Function dayYuPan3002Function;
+//    @Autowired
+//    private DayYuPan3003Function dayYuPan3003Function;
+//    @Autowired
+//    private DayYuPan3004Function dayYuPan3004Function;
+//    @Autowired
+//    private DayYuPan3005Function dayYuPan3005Function;
+//    @Autowired
+//    private DayYuPan6000Function dayYuPan6000Function;
+//    @Autowired
+//    private DayYuPan6001Function dayYuPan6001Function;
+//    @Autowired
+//    private DayYuPan6002Function dayYuPan6002Function;
+//    @Autowired
+//    private DayYuPan6003Function dayYuPan6003Function;
+//    @Autowired
+//    private DayYuPan6004Function dayYuPan6004Function;
+//    @Autowired
+//    private DayYuPan6005Function dayYuPan6005Function;
+//    @Autowired
+//    private DayYuPan6006Function dayYuPan6006Function;
+//    @Autowired
+//    private DayYuPan6007Function dayYuPan6007Function;
+//    @Autowired
+//    private DayYuPan6008Function dayYuPan6008Function;
+//    @Autowired
+//    private DayYuPan6009Function dayYuPan6009Function;
+//    @Autowired
+//    private DayYuPan6010Function dayYuPan6010Function;
+//    @Autowired
+//    private DayYuPan6011Function dayYuPan6011Function;
+//    @Autowired
+//    private DayYuPan6012Function dayYuPan6012Function;
+//    @Autowired
+//    private DayYuPan6013Function dayYuPan6013Function;
+//    @Autowired
+//    private DayYuPan6014Function dayYuPan6014Function;
+//    @Autowired
+//    private DayYuPan6015Function dayYuPan6015Function;
+//    @Autowired
+//    private DayYuPan6016Function dayYuPan6016Function;
+//    @Autowired
+//    private DayYuPan6017Function dayYuPan6017Function;
+//    @Autowired
+//    private DayYuPan6018Function dayYuPan6018Function;
+//    @Autowired
+//    private DayYuPan6019Function dayYuPan6019Function;
+//    @Autowired
+//    private DayYuPan603Function dayYuPan603Function;
+//    @Autowired
+//    private DayYuPan001Function dayYuPan001Function;
 
 
     @Override
@@ -328,10 +327,10 @@ public class StockDayServiceImpl implements StockDayService {
 //            String url = urlConfig.getStockUrl();
 //            //获取时间和编码
 //            String code = getEncoding(stockCode);
-//            String beginTime = "20190530";
+//            String beginTime = "20190722";
 //            String endTime;
 ////            try {
-//                endTime = "20190530";//parse(new Date());
+//                endTime = "20190722";//parse(new Date());
 ////            } catch (ParseException e) {
 ////                return false;
 ////            }
@@ -3537,171 +3536,171 @@ public class StockDayServiceImpl implements StockDayService {
 
         }
 
-        Page<StockDay0000> page=new Page<>(1,60);
-        List<StockDay0000> stockDay000001List = stockDay0000Service.selectByCodeAndExPage(page,"000001", "SH");
-        //获取sz
-        Page<StockDay399> page1=new Page<>(1,60);
-        List<StockDay399> stockDay399001List = stockDay399Service.selectByCodeAndExPage(page1,"399001", "SZ");
-        //获取中小
-        List<StockDay399> stockDay399005List = stockDay399Service.selectByCodeAndExPage(page1,"399005", "SZ");
-        //获取创业
-        List<StockDay399> stockDay399006List = stockDay399Service.selectByCodeAndExPage(page1,"399006", "SZ");
+//        Page<StockDay0000> page=new Page<>(1,60);
+//        List<StockDay0000> stockDay000001List = stockDay0000Service.selectByCodeAndExPage(page,"000001", "SH");
+//        //获取sz
+//        Page<StockDay399> page1=new Page<>(1,60);
+//        List<StockDay399> stockDay399001List = stockDay399Service.selectByCodeAndExPage(page1,"399001", "SZ");
+//        //获取中小
+//        List<StockDay399> stockDay399005List = stockDay399Service.selectByCodeAndExPage(page1,"399005", "SZ");
+//        //获取创业
+//        List<StockDay399> stockDay399006List = stockDay399Service.selectByCodeAndExPage(page1,"399006", "SZ");
 
-        for (StockCode stockCode : stockCodeList) {
-            boolean fage;
-            switch (stockCode.getId().substring(0, 4)) {
-                case "0000":
-                    if (stockCode.getId().equals("000001")&&stockCode.getEx().equals("SH")) {
-                        continue;
-                    }else {
-                        dayYuPan0000Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    }
-                    continue;
-                case "0001":
-                    dayYuPan0001Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0002":
-                    dayYuPan0002Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0003":
-                    dayYuPan0003Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0004":
-                    dayYuPan0004Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0005":
-                    dayYuPan0005Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0006":
-                    dayYuPan0006Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0007":
-                    dayYuPan0007Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0008":
-                    dayYuPan0008Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0009":
-                    dayYuPan0009Function.dayYuPanFunction(stockCode, stockDay399001List);
-                    continue;
-                case "0020":
-                    dayYuPan0020Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0021":
-                    dayYuPan0021Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0022":
-                    dayYuPan0022Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0023":
-                    dayYuPan0023Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0024":
-                    dayYuPan0024Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0025":
-                    dayYuPan0025Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0026":
-                    dayYuPan0026Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0027":
-                    dayYuPan0027Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "0028":
-                    dayYuPan0028Function.dayYuPanFunction(stockCode, stockDay399005List);
-                    continue;
-                case "3000":
-                    dayYuPan3000Function.dayYuPanFunction(stockCode, stockDay399006List);
-                    continue;
-                case "3001":
-                    dayYuPan3001Function.dayYuPanFunction(stockCode, stockDay399006List);
-                    continue;
-                case "3002":
-                    dayYuPan3002Function.dayYuPanFunction(stockCode, stockDay399006List);
-                    continue;
-                case "3003":
-                    dayYuPan3003Function.dayYuPanFunction(stockCode, stockDay399006List);
-                    continue;
-                case "3004":
-                    dayYuPan3004Function.dayYuPanFunction(stockCode, stockDay399006List);
-                    continue;
-                case "3005":
-                    dayYuPan3005Function.dayYuPanFunction(stockCode, stockDay399006List);
-                    continue;
-                case "6000":
-                    dayYuPan6000Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6001":
-                    dayYuPan6001Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6002":
-                    dayYuPan6002Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6003":
-                    dayYuPan6003Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6004":
-                    dayYuPan6004Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6005":
-                    dayYuPan6005Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6006":
-                    dayYuPan6006Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6007":
-                    dayYuPan6007Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6008":
-                    dayYuPan6008Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6009":
-                    dayYuPan6009Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6010":
-                    dayYuPan6010Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6011":
-                    dayYuPan6011Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6012":
-                    dayYuPan6012Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6013":
-                    dayYuPan6013Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6014":
-                    dayYuPan6014Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6015":
-                    dayYuPan6015Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6016":
-                    dayYuPan6016Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6017":
-                    dayYuPan6017Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6018":
-                    dayYuPan6018Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                case "6019":
-                    dayYuPan6019Function.dayYuPanFunction(stockCode, stockDay000001List);
-                    continue;
-                default:
-                    switch (stockCode.getId().substring(0, 3)) {
-                        case "001":
-                            dayYuPan001Function.dayYuPanFunction(stockCode, stockDay399001List);
-                            continue;
-                        case "603":
-                            dayYuPan603Function.dayYuPanFunction(stockCode, stockDay000001List);
-                            continue;
-                        default:
-                            continue;
-                    }
-            }
-        }
+//        for (StockCode stockCode : stockCodeList) {
+//            boolean fage;
+//            switch (stockCode.getId().substring(0, 4)) {
+//                case "0000":
+//                    if (stockCode.getId().equals("000001")&&stockCode.getEx().equals("SH")) {
+//                        continue;
+//                    }else {
+//                        dayYuPan0000Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    }
+//                    continue;
+//                case "0001":
+//                    dayYuPan0001Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0002":
+//                    dayYuPan0002Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0003":
+//                    dayYuPan0003Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0004":
+//                    dayYuPan0004Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0005":
+//                    dayYuPan0005Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0006":
+//                    dayYuPan0006Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0007":
+//                    dayYuPan0007Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0008":
+//                    dayYuPan0008Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0009":
+//                    dayYuPan0009Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                    continue;
+//                case "0020":
+//                    dayYuPan0020Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0021":
+//                    dayYuPan0021Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0022":
+//                    dayYuPan0022Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0023":
+//                    dayYuPan0023Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0024":
+//                    dayYuPan0024Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0025":
+//                    dayYuPan0025Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0026":
+//                    dayYuPan0026Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0027":
+//                    dayYuPan0027Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "0028":
+//                    dayYuPan0028Function.dayYuPanFunction(stockCode, stockDay399005List);
+//                    continue;
+//                case "3000":
+//                    dayYuPan3000Function.dayYuPanFunction(stockCode, stockDay399006List);
+//                    continue;
+//                case "3001":
+//                    dayYuPan3001Function.dayYuPanFunction(stockCode, stockDay399006List);
+//                    continue;
+//                case "3002":
+//                    dayYuPan3002Function.dayYuPanFunction(stockCode, stockDay399006List);
+//                    continue;
+//                case "3003":
+//                    dayYuPan3003Function.dayYuPanFunction(stockCode, stockDay399006List);
+//                    continue;
+//                case "3004":
+//                    dayYuPan3004Function.dayYuPanFunction(stockCode, stockDay399006List);
+//                    continue;
+//                case "3005":
+//                    dayYuPan3005Function.dayYuPanFunction(stockCode, stockDay399006List);
+//                    continue;
+//                case "6000":
+//                    dayYuPan6000Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6001":
+//                    dayYuPan6001Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6002":
+//                    dayYuPan6002Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6003":
+//                    dayYuPan6003Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6004":
+//                    dayYuPan6004Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6005":
+//                    dayYuPan6005Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6006":
+//                    dayYuPan6006Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6007":
+//                    dayYuPan6007Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6008":
+//                    dayYuPan6008Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6009":
+//                    dayYuPan6009Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6010":
+//                    dayYuPan6010Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6011":
+//                    dayYuPan6011Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6012":
+//                    dayYuPan6012Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6013":
+//                    dayYuPan6013Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6014":
+//                    dayYuPan6014Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6015":
+//                    dayYuPan6015Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6016":
+//                    dayYuPan6016Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6017":
+//                    dayYuPan6017Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6018":
+//                    dayYuPan6018Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                case "6019":
+//                    dayYuPan6019Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                    continue;
+//                default:
+//                    switch (stockCode.getId().substring(0, 3)) {
+//                        case "001":
+//                            dayYuPan001Function.dayYuPanFunction(stockCode, stockDay399001List);
+//                            continue;
+//                        case "603":
+//                            dayYuPan603Function.dayYuPanFunction(stockCode, stockDay000001List);
+//                            continue;
+//                        default:
+//                            continue;
+//                    }
+//            }
+//        }
         return true;
     }
 
