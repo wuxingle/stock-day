@@ -1,14 +1,9 @@
 package com.stock.stockday.controller;
 
 
-import com.stock.apicommon.model.ResultData;
-import com.stock.stockday.newService.NewListStockDayService;
-import com.stock.stockday.service.list.ListStockService;
-import com.stock.stockday.vo.StockDayVo;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

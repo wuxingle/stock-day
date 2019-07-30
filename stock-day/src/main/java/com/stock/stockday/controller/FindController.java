@@ -7,7 +7,6 @@ import com.stock.stockday.newService.find3.findService60;
 import com.stock.stockday.newService.find3.findService70;
 import com.stock.stockday.newService.find3.findService75;
 import com.stock.stockday.newService.find3.findService80;
-import com.stock.stockday.service.find.findService;
 import com.stock.stockday.service.find2.daPanService;
 import com.stock.stockday.service.find2.yanPanService;
 import com.stock.stockday.service.find2.yanPanService2;
@@ -28,8 +27,8 @@ import java.util.List;
 @CrossOrigin(allowCredentials = "true",allowedHeaders = "*")
 @RequestMapping(value = "/day/v1", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class FindController {
-    @Autowired
-    private findService findService;
+//    @Autowired
+//    private findService findService;
     @Autowired
     private daPanService daPanService;
     @Autowired
@@ -54,47 +53,47 @@ public class FindController {
     private findService100 findService100;
 
 
-    @GetMapping("/duoTuXiangShang")
-    public ResultData<List<StockDayVo>> duoTuXiangShang(){
-        List<StockDayVo> stockDayVoList=findService.duoTuXiangShang();
-        return new ResultData(stockDayVoList);
-    }
-
-    @GetMapping("/shengV")
-    public ResultData<List<StockDayVo>> shengV(){
-        List<StockDayVo> stockDayVoList=findService.shengV();
-        return new ResultData(stockDayVoList);
-    }
-
-    @GetMapping("/reset20")
-    public ResultData<List<StockDayVo>> reset20(){
-        List<StockDayVo> stockDayVoList=findService.reset20();
-        return new ResultData(stockDayVoList);
-    }
-
-    @GetMapping("/jieQi")
-    public ResultData<List<StockDayVo>> jieQi(){
-        List<StockDayVo> stockDayVoList=findService.jieQi();
-        return new ResultData(stockDayVoList);
-    }
-
-    @GetMapping("/jishujieqi")
-    public ResultData<List<StockDayVo>> jishujieqi(){
-        List<StockDayVo> stockDayVoList=findService.jishujieqi();
-        return new ResultData(stockDayVoList);
-    }
-
-    @GetMapping("/jishujieqi1")
-    public ResultData<List<StockDayVo>> jishujieqi1(){
-        List<StockDayVo> stockDayVoList=findService.jishujieqi1();
-        return new ResultData(stockDayVoList);
-    }
-
-    @GetMapping("/jieQi2")
-    public ResultData<List<StockDayVo>> jieQi2(){
-        List<StockDayVo> stockDayVoList=findService.jieQi2();
-        return new ResultData(stockDayVoList);
-    }
+//    @GetMapping("/duoTuXiangShang")
+//    public ResultData<List<StockDayVo>> duoTuXiangShang(){
+//        List<StockDayVo> stockDayVoList=findService.duoTuXiangShang();
+//        return new ResultData(stockDayVoList);
+//    }
+//
+//    @GetMapping("/shengV")
+//    public ResultData<List<StockDayVo>> shengV(){
+//        List<StockDayVo> stockDayVoList=findService.shengV();
+//        return new ResultData(stockDayVoList);
+//    }
+//
+//    @GetMapping("/reset20")
+//    public ResultData<List<StockDayVo>> reset20(){
+//        List<StockDayVo> stockDayVoList=findService.reset20();
+//        return new ResultData(stockDayVoList);
+//    }
+//
+//    @GetMapping("/jieQi")
+//    public ResultData<List<StockDayVo>> jieQi(){
+//        List<StockDayVo> stockDayVoList=findService.jieQi();
+//        return new ResultData(stockDayVoList);
+//    }
+//
+//    @GetMapping("/jishujieqi")
+//    public ResultData<List<StockDayVo>> jishujieqi(){
+//        List<StockDayVo> stockDayVoList=findService.jishujieqi();
+//        return new ResultData(stockDayVoList);
+//    }
+//
+//    @GetMapping("/jishujieqi1")
+//    public ResultData<List<StockDayVo>> jishujieqi1(){
+//        List<StockDayVo> stockDayVoList=findService.jishujieqi1();
+//        return new ResultData(stockDayVoList);
+//    }
+//
+//    @GetMapping("/jieQi2")
+//    public ResultData<List<StockDayVo>> jieQi2(){
+//        List<StockDayVo> stockDayVoList=findService.jieQi2();
+//        return new ResultData(stockDayVoList);
+//    }
     @GetMapping("/dayYanPanFunction57")
     public ResultData<List<StockDayVo>> dayYanPanFunction57() throws IOException {
         List<StockDayVo> stockDayVoList=findService60.dayYanPanFunction57();
