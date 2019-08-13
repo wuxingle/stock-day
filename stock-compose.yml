@@ -24,3 +24,25 @@ services:
       - TZ=Asia/Shanghai
       - spring.cloud.config.profile=sit
       - "eureka.client.service-url.defaultZone=http://register-center:8781/eureka/"
+  log-center:
+    build: ./log-center
+    image: stock/log-center
+    network_mode: "host"
+    restart: always
+    ports:
+      - "8895:8895"
+    environment:
+      - TZ=Asia/Shanghai
+      - spring.cloud.config.profile=sit
+      - "eureka.client.service-url.defaultZone=http://register-center:8781/eureka/"
+  stocket-center:
+    build: ./socket-center
+    image: stock/socket-center
+    network_mode: "host"
+    restart: always
+    ports:
+      - "8898:8898"
+    environment:
+      - TZ=Asia/Shanghai
+      - spring.cloud.config.profile=sit
+      - "eureka.client.service-url.defaultZone=http://register-center:8781/eureka/"

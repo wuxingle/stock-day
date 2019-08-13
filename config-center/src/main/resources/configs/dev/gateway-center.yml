@@ -22,6 +22,9 @@ zuul:
     day:
       path: /api-d/**
       serviceId: stock-day
+    log:
+      path: /api-l/**
+      serviceId: log-center
   host:
     connect-timeout-millis: 10000001
     socket-timeout-millis: 60000001

@@ -17,6 +17,7 @@
 		<module>stock-day</module>
 		<module>socket-center</module>
 		<module>socket-center2</module>
+		<module>log-center</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
