@@ -54,6 +54,7 @@ public class DayScience0028FunctionToday {
 
     public boolean dayScience0028Function(StockDay0028 stockDay0028) {
         Page<StockDay0028> page = new Page<>(1, 60);
+
         List<StockDay0028> stockDay0028List = stockDay0028Service.selectByCodeAndExPage(page, stockDay0028.getCodeId(), stockDay0028.getCodeEx());
         Page<StockDayScience0028> page1 = new Page<>(1, 60);
         List<StockDayScience0028> stockDayScience0028List = stockDayScience0028Service.selectByPage(page1, stockDay0028.getCodeId(), stockDay0028.getCodeEx());
@@ -92,9 +93,15 @@ public class DayScience0028FunctionToday {
         redisTemplate.opsForValue().set(stockDay0028.getCodeEx()+stockDay0028.getCodeId(), stockDay0028List);
         MacdEntity macdEntity1 = new MacdEntity();
         macdEntity1.setClosingPrice(stockDay0028.getClosingPrice());
-        macdEntity1.setBeforeEma12(stockDayScience0028List.get(0).getEma12());
-        macdEntity1.setBeforeDea(stockDayScience0028List.get(0).getDea());
-        macdEntity1.setBeforeEma26(stockDayScience0028List.get(0).getEma26());
+        if (stockDayScience0028List == null || stockDayScience0028List.size() == 0) {
+            macdEntity1.setBeforeEma12(new BigDecimal(50.0));
+            macdEntity1.setBeforeDea(new BigDecimal(50.0));
+            macdEntity1.setBeforeEma26(new BigDecimal(50.0));
+        }else {
+            macdEntity1.setBeforeEma12(stockDayScience0028List.get(0).getEma12());
+            macdEntity1.setBeforeDea(stockDayScience0028List.get(0).getDea());
+            macdEntity1.setBeforeEma26(stockDayScience0028List.get(0).getEma26());
+        }
         List<KDJEntity> kdjEntityList = new ArrayList<>();
         KDJEntity kdjEntity1 = new KDJEntity();
         KDJEntity kdjEntity2 = new KDJEntity();
@@ -186,9 +193,15 @@ public class DayScience0028FunctionToday {
         }
         //kdj
         if (kdjEntityList.size() == 9) {
-            kdjEntity1.setBeforeD(stockDayScience0028List.get(0).getD());
-            kdjEntity1.setBeforeK(stockDayScience0028List.get(0).getK());
-            kdjEntity1.setBeforeRSV(stockDayScience0028List.get(0).getRsv());
+            if (stockDayScience0028List.get(0).getD()==null||stockDayScience0028List.get(0).getK()==null||stockDayScience0028List.get(0).getRsv()==null) {
+                kdjEntity1.setBeforeD(new BigDecimal(50));
+                kdjEntity1.setBeforeK(new BigDecimal(50));
+                kdjEntity1.setBeforeRSV(new BigDecimal(50));
+            }else {
+                kdjEntity1.setBeforeD(stockDayScience0028List.get(0).getD());
+                kdjEntity1.setBeforeK(stockDayScience0028List.get(0).getK());
+                kdjEntity1.setBeforeRSV(stockDayScience0028List.get(0).getRsv());
+            }
             Collections.sort(kdjEntityList, new Comparator<KDJEntity>() {
                 @Override
                 public int compare(KDJEntity o1, KDJEntity o2) {

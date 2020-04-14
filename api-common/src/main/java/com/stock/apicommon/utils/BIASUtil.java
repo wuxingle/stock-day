@@ -32,17 +32,23 @@ public class BIASUtil {
 
             if (i==5){
               price6=sumPrice6.divide(new BigDecimal(6),4, RoundingMode.HALF_UP);
-              BIAS6=((biasEntityList.get(0).getClosingPrice().subtract(price6)).divide(price6,4,RoundingMode.HALF_UP)).multiply(new BigDecimal(100));
+              if (price6.compareTo(new BigDecimal(0))!=0) {
+                  BIAS6 = ((biasEntityList.get(0).getClosingPrice().subtract(price6)).divide(price6, 4, RoundingMode.HALF_UP)).multiply(new BigDecimal(100));
+              }
             }
 
             if (i==11){
                 price12=sumPrice12.divide(new BigDecimal(12),4, RoundingMode.HALF_UP);
-                BIAS12=((biasEntityList.get(0).getClosingPrice().subtract(price12)).divide(price12,4,RoundingMode.HALF_UP)).multiply(new BigDecimal(100));
+                if (price12.compareTo(new BigDecimal(0))!=0) {
+                    BIAS12 = ((biasEntityList.get(0).getClosingPrice().subtract(price12)).divide(price12, 4, RoundingMode.HALF_UP)).multiply(new BigDecimal(100));
+                }
             }
 
             if (i==29){
                 price30=sumPrice30.divide(new BigDecimal(30),4, RoundingMode.HALF_UP);
-                BIAS30=((biasEntityList.get(0).getClosingPrice().subtract(price30)).divide(price30,4,RoundingMode.HALF_UP)).multiply(new BigDecimal(100));
+                if (price30.compareTo(new BigDecimal(0))!=0) {
+                    BIAS30 = ((biasEntityList.get(0).getClosingPrice().subtract(price30)).divide(price30, 4, RoundingMode.HALF_UP)).multiply(new BigDecimal(100));
+                }
             }
         }
         biasVo.setBIAS5(BIAS6);

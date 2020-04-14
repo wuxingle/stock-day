@@ -92,9 +92,15 @@ public class DayScience0008FunctionToday {
         redisTemplate.opsForValue().set(stockDay0008.getCodeEx()+stockDay0008.getCodeId(), stockDay0008List);
         MacdEntity macdEntity1 = new MacdEntity();
         macdEntity1.setClosingPrice(stockDay0008.getClosingPrice());
-        macdEntity1.setBeforeEma12(stockDayScience0008List.get(0).getEma12());
-        macdEntity1.setBeforeDea(stockDayScience0008List.get(0).getDea());
-        macdEntity1.setBeforeEma26(stockDayScience0008List.get(0).getEma26());
+        if (stockDayScience0008List == null || stockDayScience0008List.size() == 0) {
+            macdEntity1.setBeforeEma12(new BigDecimal(50.0));
+            macdEntity1.setBeforeDea(new BigDecimal(50.0));
+            macdEntity1.setBeforeEma26(new BigDecimal(50.0));
+        }else {
+            macdEntity1.setBeforeEma12(stockDayScience0008List.get(0).getEma12());
+            macdEntity1.setBeforeDea(stockDayScience0008List.get(0).getDea());
+            macdEntity1.setBeforeEma26(stockDayScience0008List.get(0).getEma26());
+        }
         List<KDJEntity> kdjEntityList = new ArrayList<>();
         KDJEntity kdjEntity1 = new KDJEntity();
         KDJEntity kdjEntity2 = new KDJEntity();
@@ -186,9 +192,15 @@ public class DayScience0008FunctionToday {
         }
         //kdj
         if (kdjEntityList.size() == 9) {
-            kdjEntity1.setBeforeD(stockDayScience0008List.get(0).getD());
-            kdjEntity1.setBeforeK(stockDayScience0008List.get(0).getK());
-            kdjEntity1.setBeforeRSV(stockDayScience0008List.get(0).getRsv());
+            if (stockDayScience0008List.get(0).getD()==null||stockDayScience0008List.get(0).getK()==null||stockDayScience0008List.get(0).getRsv()==null) {
+                kdjEntity1.setBeforeD(new BigDecimal(50));
+                kdjEntity1.setBeforeK(new BigDecimal(50));
+                kdjEntity1.setBeforeRSV(new BigDecimal(50));
+            }else {
+                kdjEntity1.setBeforeD(stockDayScience0008List.get(0).getD());
+                kdjEntity1.setBeforeK(stockDayScience0008List.get(0).getK());
+                kdjEntity1.setBeforeRSV(stockDayScience0008List.get(0).getRsv());
+            }
             Collections.sort(kdjEntityList, new Comparator<KDJEntity>() {
                 @Override
                 public int compare(KDJEntity o1, KDJEntity o2) {

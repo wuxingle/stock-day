@@ -96,9 +96,15 @@ public class DayScience0000FunctionToday {
         redisTemplate.opsForValue().set(stockDay0000.getCodeEx()+stockDay0000.getCodeId(), stockDay0000List);
         MacdEntity macdEntity1 = new MacdEntity();
         macdEntity1.setClosingPrice(stockDay0000.getClosingPrice());
-        macdEntity1.setBeforeEma12(stockDayScience0000List.get(0).getEma12());
-        macdEntity1.setBeforeDea(stockDayScience0000List.get(0).getDea());
-        macdEntity1.setBeforeEma26(stockDayScience0000List.get(0).getEma26());
+        if (stockDayScience0000List == null || stockDayScience0000List.size() == 0) {
+            macdEntity1.setBeforeEma12(new BigDecimal(50.0));
+            macdEntity1.setBeforeDea(new BigDecimal(50.0));
+            macdEntity1.setBeforeEma26(new BigDecimal(50.0));
+        }else {
+            macdEntity1.setBeforeEma12(stockDayScience0000List.get(0).getEma12());
+            macdEntity1.setBeforeDea(stockDayScience0000List.get(0).getDea());
+            macdEntity1.setBeforeEma26(stockDayScience0000List.get(0).getEma26());
+        }
         List<KDJEntity> kdjEntityList = new ArrayList<>();
         KDJEntity kdjEntity1 = new KDJEntity();
         KDJEntity kdjEntity2 = new KDJEntity();
@@ -190,7 +196,7 @@ public class DayScience0000FunctionToday {
         }
         //kdj
         if (kdjEntityList.size() == 9) {
-            if (StringUtils.isEmpty(stockDayScience0000List)) {
+            if (stockDayScience0000List.get(0).getD()==null||stockDayScience0000List.get(0).getK()==null||stockDayScience0000List.get(0).getRsv()==null) {
                 kdjEntity1.setBeforeD(new BigDecimal(50));
                 kdjEntity1.setBeforeK(new BigDecimal(50));
                 kdjEntity1.setBeforeRSV(new BigDecimal(50));
